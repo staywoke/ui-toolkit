@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="assets/css/color-brewer.min.css">
+<script src="assets/js/highlight.min.js"></script>
+<script src="assets/js/beautify-html.min.js"></script>
+<script src="assets/js/site.js"></script>
+
+<style>
+#storybook-preview-iframe {
+  border: none !important;
+}
+.hljs {
+  background: #FFF;
+  padding: 10px 20px;
+  border-left: 4px solid #eaeaea;
+}
+.Pane .Pane2 div[role="tabpanel"] h4 {
+  margin-top: 40px;
+}
+.Pane .Pane2 div[role="tabpanel"] p:empty {
+  display: none !important;
+  line-height: 0 !important;
+}
+.Pane .Pane2 div[role="tabpanel"] br {
+  display: none !important;
+  line-height: 0 !important;
+}
+
+.Pane .Pane2 div[role="tabpanel"] a {
+  color: #409dff;
+  text-decoration: none;
+}
+.Pane .Pane2 div[role="tabpanel"] a:hover {
+  text-decoration: underline;
+}
+
+.Pane .Pane2 div[role="tabpanel"] h1,
+.Pane .Pane2 div[role="tabpanel"] h2,
+.Pane .Pane2 div[role="tabpanel"] h3,
+.Pane .Pane2 div[role="tabpanel"] h4,
+.Pane .Pane2 div[role="tabpanel"] h5,
+.Pane .Pane2 div[role="tabpanel"] h6 {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  color: rgb(130, 130, 130);
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+</style>
+
+<script>
+window.onload = function () {
+  hljs.configure({ languages: ['xml'] });
+  setTimeout(highlightCode, 100);
+};
+</script>
