@@ -40,9 +40,28 @@
   color: #666;
   font-size: 16px;
 }
-.Pane .Pane2 div[role="tabpanel"] p:empty {
-  display: none !important;
-  line-height: 0 !important;
+.Pane .Pane2 div[role="tabpanel"] form label {
+  width: 125px !important;
+}
+
+.Pane .Pane2 div[role="tabpanel"] form {
+  margin-top: 50px;
+}
+.Pane .Pane2 div[role="tabpanel"] form::before {
+  content: 'Use the Form below to Dynamically Generate Markup for this Component.';
+  position: absolute;
+  width: calc(100% - 50px);
+  left: 10px;
+  top: 10px;
+  background: #fdfdfd;
+  padding: 14px;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .Pane .Pane2 div[role="tabpanel"] h1,
@@ -57,6 +76,10 @@
   font-weight: normal;
 }
 
+.Pane .Pane2 div[role="tabpanel"] p:empty {
+  display: none !important;
+  line-height: 0 !important;
+}
 </style>
 
 <script>
