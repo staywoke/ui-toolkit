@@ -1,14 +1,29 @@
 Atom › Button
 ---
 
-Commonly used button.
+The following is a quick example of how to use this component.
 
-#### Example:
+#### Template:
 
 ```xml
-<el-button type=success :plain=true :round=true>Button</el-button>
+<el-button type="success" plain round>Button</el-button>
+```
+
+#### Script:
+```js
+import Button from '../atoms/Button'
+
+export default {
+  name: 'MyButton',
+  components: {
+    Button
+  },
+  data () {
+    return {}
+  }
+}
 ```
 
 #### Documentation:
 
-[Vue.js Element › Button](http://element.eleme.io/#/en-US/component/button)
+[Component Docs ⇨](http://element.eleme.io/#/en-US/component/button)

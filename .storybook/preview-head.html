@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="assets/css/color-brewer.min.css">
 <script src="assets/js/highlight.min.js"></script>
+<script src="assets/js/beautify.min.js"></script>
+<script src="assets/js/beautify-css.min.js"></script>
 <script src="assets/js/beautify-html.min.js"></script>
 <script src="assets/js/site.js"></script>
 
@@ -13,13 +15,12 @@
   padding: 14px !important;
   border-radius: 0 !important;
   position: fixed;
-  bottom: -14px;
-  left: 0;
-  width: 100%;
-  background-color: #fbfbfb !important;
+  bottom: -2px;
+  left: 10px;
+  width: calc(100% - 50px);
+  background-color: #fdfdfd !important;
   color: #000 !important;
-  border-top: 1px solid #eaeaea;
-
+  border: 1px solid #eaeaea;
 }
 
 .vue-info .component-area {
@@ -37,7 +38,7 @@
 
 <script>
 window.onload = function () {
-  hljs.configure({ languages: ['xml'] });
+  hljs.configure({ languages: ['xml', 'js', 'css'] });
 
   setInterval(function(){
     highlightCode();
