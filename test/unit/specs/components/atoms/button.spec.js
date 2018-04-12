@@ -10,9 +10,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('el-button--primary')).toBe(true)
+    expect(elm.classList.contains('el-button--primary')).toBe(true)
   })
 
   it('icon', () => {
@@ -23,9 +23,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.querySelector('.el-icon-search')).not.toBeNull()
+    expect(elm.querySelector('.el-icon-search')).not.toBeNull()
   })
 
   it('nativeType', () => {
@@ -36,9 +36,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.getAttribute('type')).toEqual('submit');
+    expect(elm.getAttribute('type')).toEqual('submit');
   })
 
   it('loading', () => {
@@ -49,10 +49,10 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('is-loading')).toBe(true)
-    expect(buttonElm.querySelector('.el-icon-loading')).not.toBeNull()
+    expect(elm.classList.contains('is-loading')).toBe(true)
+    expect(elm.querySelector('.el-icon-loading')).not.toBeNull()
   })
 
   it('disabled', () => {
@@ -63,9 +63,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('is-disabled')).toBe(true)
+    expect(elm.classList.contains('is-disabled')).toBe(true)
   })
 
   it('size', () => {
@@ -76,9 +76,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('el-button--medium')).toBe(true)
+    expect(elm.classList.contains('el-button--medium')).toBe(true)
   })
 
   it('plain', () => {
@@ -89,9 +89,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('is-plain')).toBe(true)
+    expect(elm.classList.contains('is-plain')).toBe(true)
   })
 
   it('round', () => {
@@ -102,9 +102,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('is-round')).toBe(true)
+    expect(elm.classList.contains('is-round')).toBe(true)
   })
 
   it('circle', () => {
@@ -115,9 +115,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    expect(buttonElm.classList.contains('is-circle')).toBe(true)
+    expect(elm.classList.contains('is-circle')).toBe(true)
   })
 
   it('click', () => {
@@ -135,9 +135,9 @@ describe('Component › Atom › Button', () => {
       }
     }).$mount()
 
-    let buttonElm = vm.$el
+    let elm = vm.$el
 
-    buttonElm.click()
+    elm.click()
 
     expect(clicked).toBe(true)
   })
