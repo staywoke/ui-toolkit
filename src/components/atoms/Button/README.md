@@ -11,10 +11,10 @@ The following is a quick example of how to use this component.
 
 #### Script:
 ```js
-import Button from '../atoms/Button'
+import Button from '../atoms/button'
 
 export default {
-  name: 'MyButton',
+  name: 'MyComponent',
   components: {
     Button
   },
@@ -26,4 +26,5 @@ export default {
 
 #### Documentation:
 
-[Component Docs ⇨](http://element.eleme.io/#/en-US/component/button)
+* [Framework Docs](http://element.eleme.io/#/en-US/component/button)
+* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/button)

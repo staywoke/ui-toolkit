@@ -2,12 +2,12 @@ var templateReg = /(<\/?)template([\s\S]*?>)/ig;
 var vueBeautifyDivReg = /(<\/?)vueBeautifyDiv([\s\S]*?>)/ig;
 var samples = document.getElementsByTagName('pre');
 var formatOptions = {
-  indent_size: 4,
+  indent_size: 2,
   indent_char: ' ',
-  indent_with_tabs: true,
+  indent_with_tabs: false,
   eol: '\n',
-  end_with_newline: true,
-  indent_level: 4,
+  end_with_newline: false,
+  indent_level: 0,
   preserve_newlines: true,
   max_preserve_newlines: 10,
   space_in_paren: true,
@@ -21,7 +21,7 @@ var formatOptions = {
   unescape_strings: true,
   wrap_line_length: 0,
   e4x: false,
-  comma_first: true,
+  comma_first: false,
   operator_position: 'before-newline'
 }
 
@@ -83,7 +83,7 @@ function beautifyVue(text) {
     return begin + 'vueBeautifyDiv' + end;
   });
 
-  text = html_beautify(text);
+  text = html_beautify(text, formatOptions);
 
   return text.replace(vueBeautifyDivReg, function(match, begin, end) {
     return begin + 'template' + end;
@@ -99,13 +99,47 @@ function highlightCode() {
       if (markup.charAt(0) === '<') {
         markup = beautifyVue(markup);
       } else {
-        markup = js_beautify(markup);
+        markup = js_beautify(markup, formatOptions);
       }
 
       var output = hljs.fixMarkup(hljs.highlightAuto(markup).value);
 
       samples[i].innerHTML = output;
       samples[i].classList.add('highlighted');
+
+      externallinks();
+      updatePageTitle();
     }
   }
 }
+
+function externallinks() {
+	if (!document.getElementsByTagName) return;
+	var anchors = document.getElementsByTagName('a');
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if (anchor.getAttribute('href')) {
+      if(anchor.getAttribute('href').substring(0, 4) === 'http' && anchor.target !== '_blank') {
+        anchor.target = '_blank';
+      }
+		}
+	}
+}
+
+function getJsonFromUrl() {
+  var query = location.search.substr(1);
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+  return result;
+}
+
+function updatePageTitle () {
+  var params = getJsonFromUrl();
+
+  document.title = (params) ? `UI Toolkit - ${params.selectedKind} - ${params.selectedStory}` : 'StayWoke - UI Toolkit'
+}
+
+updatePageTitle();

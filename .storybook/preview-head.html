@@ -6,6 +6,12 @@
 <script src="assets/js/site.js"></script>
 
 <style>
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .vue-info h2, .vue-info .props {
   display: none;
 }
@@ -39,9 +45,6 @@
 <script>
 window.onload = function () {
   hljs.configure({ languages: ['xml', 'js', 'css'] });
-
-  setInterval(function(){
-    highlightCode();
-  }, 100);
+  setInterval(highlightCode, 100);
 };
 </script>

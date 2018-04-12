@@ -8,6 +8,7 @@
 <style>
 #storybook-preview-iframe {
   border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0 !important;
 }
 .highlighted {
   background: #fdfdfd;
@@ -40,10 +41,14 @@
   color: #666;
   font-size: 16px;
 }
+
+.Pane .Pane2 div[role="tablist"] button:focus {
+  outline: none !important;
+}
+
 .Pane .Pane2 div[role="tabpanel"] form label {
   width: 125px !important;
 }
-
 .Pane .Pane2 div[role="tabpanel"] form {
   margin-top: 50px;
 }
@@ -85,6 +90,6 @@
 <script>
 window.onload = function () {
   hljs.configure({ languages: ['xml', 'js', 'css'] });
-  setTimeout(highlightCode, 100);
+  setInterval(highlightCode, 100);
 };
 </script>

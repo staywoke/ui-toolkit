@@ -1,42 +1,32 @@
+import VueInfoAddon from 'storybook-addon-vue-info'
+import Centered from '@storybook/addon-centered';
+
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withMarkdownNotes } from '@storybook/addon-notes';
-import VueInfoAddon from 'storybook-addon-vue-info'
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue';
 
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-  button,
-} from '@storybook/addon-knobs/vue';
-
-import Centered from '@storybook/addon-centered';
-
-import Button from '.';
+import Component from '.';
 import README from './README.md';
 
-const stories = storiesOf('Atom | Button', module);
+const stories = storiesOf('Atoms | Button', module);
 
 stories.addDecorator(VueInfoAddon);
 stories.addDecorator(Centered);
 stories.addDecorator(withKnobs);
 stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context));
 
-stories.add('Playground', () => {
+stories.add('Component Overview', () => {
   const types = select(
-    'Types',
+    'Type',
     {
       '': '---',
       'primary': 'primary',
       'success': 'success',
       'info': 'info',
       'warning': 'warning',
-      'danger': 'danger'
+      'danger': 'danger',
+      'text': 'text'
     },
     ''
   );
@@ -176,11 +166,62 @@ stories.add('Playground', () => {
 
   attributes = attributes.trim()
 
-  if (iconPlacement === 'right') {
+  if (icons !== '' && iconPlacement === 'right') {
     embeddedIcon = `<i class="${icons} el-icon-right"></i>`
   }
 
   return {
-    template: `<el-button ${attributes}>${label} ${embeddedIcon}</el-button>`
+    template: `<el-button ${attributes} @click="actionLogger">${label} ${embeddedIcon}</el-button>`,
+    methods: {
+      actionLogger: action('Button Clicked'),
+    }
+  }
+})
+
+stories.add('› Default', () => {
+  return {
+    template: '<el-button type="primary">Primary</el-button>'
+  }
+})
+
+stories.add('› Plain', () => {
+  return {
+    template: '<el-button type="primary" plain>Primary</el-button>'
+  }
+})
+
+stories.add('› Rounded', () => {
+  return {
+    template: '<el-button type="primary" round>Primary</el-button>'
+  }
+})
+
+stories.add('› Round Icon', () => {
+  return {
+    template: '<el-button type="success" icon="el-icon-check" circle></el-button>'
+  }
+})
+
+stories.add('› Square Icon', () => {
+  return {
+    template: '<el-button type="success" icon="el-icon-check"></el-button>'
+  }
+})
+
+stories.add('› Loading', () => {
+  return {
+    template: '<el-button type="primary" :loading="true">Loading</el-button>'
+  }
+})
+
+stories.add('› Disabled', () => {
+  return {
+    template: '<el-button type="primary" disabled>Primary</el-button>'
+  }
+})
+
+stories.add('› Text', () => {
+  return {
+    template: '<el-button type="text">Text Button</el-button>'
   }
 })
