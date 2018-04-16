@@ -1,5 +1,5 @@
-import Alert from 'alert';
-import Button from 'button';
+import Alert from './alert';
+import Button from './button';
 
 module.exports = {
   Alert,

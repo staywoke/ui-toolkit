@@ -1,4 +1,4 @@
-import ButtonGroup from 'button-group';
+import ButtonGroup from './button-group';
 
 module.exports = {
   ButtonGroup
