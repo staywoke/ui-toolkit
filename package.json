@@ -8,7 +8,9 @@
     "Components",
     "UI",
     "Toolkit",
-    "StayWoke"
+    "StayWoke",
+    "Activism",
+    "Platform"
   ],
   "license": "MIT",
   "main": "./src/components/index.js",
