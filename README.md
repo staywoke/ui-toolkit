@@ -9,6 +9,10 @@ Overview
 
 This project is the home for all StayWoke Vue.js 2 Components in our UI Toolkit. It is not set up to be a complete Web Application, but rather a collection of parts you can use to speed up development of your own.
 
+
+Sample Project
+---
+
 We felt it would help to see how you would implement our UI Toolkit in the "Real World" so we made a Sample Project that uses our UI ToolKit to get you started within minutes on making a full-blown Vue.js 2 Web Application.
 
 #### [View Sample Project ⇨](https://github.com/staywoke/ui-toolkit-sample-project)
@@ -17,7 +21,7 @@ We felt it would help to see how you would implement our UI Toolkit in the "Real
 UI Toolkit Components
 ---
 
-> UI Toolkit uses [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) Principles.
+> UI Toolkit uses [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) Principles. Each component has example documentation for implementing in your Vue.js 2 Project.
 
 **Atoms**
 
@@ -31,28 +35,15 @@ UI Toolkit Components
 Developer Scripts
 ---
 
+> Developers of UI Toolkit really only need the following development scripts.
+
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
 # serve interactive components with hot reload at localhost:9001
 npm run storybook
 
-# check code quality
-npm run lint
-
-# run unit tests
-npm run unit
-
 # run all tests
 npm test
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
