@@ -29,5 +29,5 @@ export default {
 
 #### Documentation:
 
-* [Framework Docs](http://element.eleme.io/#/en-US/component/alert)
+* [Alert Component Docs](https://element.eleme.io/#/en-US/component/alert)
 * [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/alert)

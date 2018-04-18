@@ -26,5 +26,5 @@ export default {
 
 #### Documentation:
 
-* [Framework Docs](http://element.eleme.io/#/en-US/component/button)
+* [Button Component Docs](https://element.eleme.io/#/en-US/component/button)
 * [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/button)

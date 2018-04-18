@@ -31,5 +31,5 @@ export default {
 
 #### Documentation:
 
-* [Framework Docs](http://element.eleme.io/#/en-US/component/button)
+* [Button Group Component Docs](https://element.eleme.io/#/en-US/component/button#button-group)
 * [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/molecules/button-group/)
