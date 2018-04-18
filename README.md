@@ -7,7 +7,7 @@
 Sample Project
 ---
 
-This project is the home for all StayWoke Vue.js 2 Components in our UI Toolkit. It is not set up to be a complete project, but rather a collection of parts you can use to speed up development.
+This project is the home for all StayWoke Vue.js 2 Components in our UI Toolkit. It is not set up to be a complete Web Application, but rather a collection of parts you can use to speed up development of your own.
 
 We felt it would help to see how you would implement our UI Toolkit in the "Real World" so we made a Sample Project that uses our UI ToolKit to get you started within minutes on making a full-blown Vue.js 2 Web Application.
 
@@ -41,5 +41,4 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
 ```
