@@ -2,7 +2,6 @@
 
 import ButtonGroup from './button-group';
 
-module.exports = {
-  version: '1.0.0',
+export {
   ButtonGroup
 };

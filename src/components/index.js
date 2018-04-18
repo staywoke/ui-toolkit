@@ -4,8 +4,7 @@ import Alert from './atoms/alert';
 import Button from './atoms/button';
 import ButtonGroup from './molecules/button-group';
 
-module.exports = {
-  version: '1.0.0',
+export {
   Alert,
   Button,
   ButtonGroup

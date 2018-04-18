@@ -3,8 +3,7 @@
 import Alert from './alert';
 import Button from './button';
 
-module.exports = {
-  version: '1.0.0',
+export {
   Alert,
   Button
 };
