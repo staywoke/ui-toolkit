@@ -4,7 +4,7 @@
 
 > Vue.js UI Toolkit for Rapid Project Development of StayWoke Projects.
 
-Sample Project
+Overview
 ---
 
 This project is the home for all StayWoke Vue.js 2 Components in our UI Toolkit. It is not set up to be a complete Web Application, but rather a collection of parts you can use to speed up development of your own.
@@ -13,6 +13,20 @@ We felt it would help to see how you would implement our UI Toolkit in the "Real
 
 #### [View Sample Project ⇨](https://github.com/staywoke/ui-toolkit-sample-project)
 
+
+UI Toolkit Components
+---
+
+> UI Toolkit uses [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) Principles.
+
+**Atoms**
+
+* [Alert](./src/components/atoms/alert)
+* [Button](./src/components/atoms/button)
+
+**Molecules**
+
+* [Button Group](./src/components/molecules/button-group)
 
 Developer Scripts
 ---
