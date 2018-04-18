@@ -11,7 +11,7 @@ The following is a quick example of how to use this component.
 
 #### Script:
 ```js
-import Alert from '../atoms/alert'
+import { Alert } from 'ui-toolkit'
 
 export default {
   name: 'MyComponent',

@@ -15,8 +15,7 @@ The following is a quick example of how to use this component.
 
 #### Script:
 ```js
-import Button from '../atoms/button'
-import ButtonGroup from '../molecules/button-group'
+import { Button, ButtonGroup } from 'ui-toolkit'
 
 export default {
   name: 'MyComponent',
