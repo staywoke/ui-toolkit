@@ -2,8 +2,22 @@
 
 import Alert from './alert';
 import Button from './button';
+import Checkbox from './checkbox';
+import CheckboxButton from './checkbox-button';
+import CheckboxGroup from './checkbox-group';
+import Icon from './icon';
+import Radio from './radio';
+import RadioButton from './radio-button';
+import RadioGroup from './radio-group';
 
 export {
   Alert,
-  Button
+  Button,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
+  Icon,
+  Radio,
+  RadioButton,
+  RadioGroup
 };

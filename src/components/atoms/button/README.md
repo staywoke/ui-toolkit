@@ -1,13 +1,15 @@
 Atom › Button
 ---
 
-The following is a quick example of how to use this component.
+> The following is a quick example of how to use this component.
+
 
 #### Template:
 
 ```xml
 <el-button type="success" plain round>Button</el-button>
 ```
+
 
 #### Script:
 ```js
@@ -23,6 +25,7 @@ export default {
   }
 }
 ```
+
 
 #### Documentation:
 

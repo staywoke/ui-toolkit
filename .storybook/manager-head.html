@@ -6,6 +6,18 @@
 <script src="assets/js/site.js"></script>
 
 <style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #storybook-preview-iframe {
   border: none !important;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0 !important;
@@ -16,7 +28,7 @@
   border: 1px solid #eaeaea;
 }
 .Pane .Pane2 div[role="tabpanel"] {
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
 .Pane .Pane2 div[role="tabpanel"] h2 {
@@ -85,11 +97,78 @@
   display: none !important;
   line-height: 0 !important;
 }
+
+.Pane .Pane2 pre[class^='css-glamorous-pre'] > div[class^='css-glamorous-div'] > div[class^='css-glamorous-div'] > li {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+
+.Pane .Pane2 pre[class^='css-glamorous-pre'] > div[class^='css-glamorous-div']:first-of-type > div[class^='css-glamorous-div'] > li {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.Pane .Pane2 select {
+  -webkit-appearance: none;
+}
+
+.Pane.horizontal.Pane2 pre {
+  opacity: 0;
+}
+
+.Pane.horizontal.Pane2 pre.highlighted,
+.Pane.horizontal.Pane2 pre[class^='css-glamorous-pre'] {
+  opacity: 1;
+}
+
+.Pane.horizontal.Pane2 blockquote {
+  border: 1px solid #eaeaea;
+  border-left: 4px solid #d5d5d5;
+  margin: 0;
+  padding-left: 20px;
+  background: #fdfdfd;
+  color: #000;
+}
+
+.Pane.horizontal.Pane2 ul {
+  margin-left: 18px;
+  padding: 0;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li:first-child a:first-of-type {
+  color: #333;
+  font-weight: 500;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li:first-child a:first-of-type::before {
+  content: '\2606';
+  position: absolute;
+  left: -19px;
+  color: #cecece;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li a[class^='css-glamorous-routedlink'] {
+  background: #f7f7f7;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li a[class^='css-glamorous-routedlink']:hover {
+  background: #FFF;
+}
+
+.css-glamorous-routedlink--1cigum0, .css-glamorous-routedlink--1cigum0:hover {
+  background: #444 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
 </style>
 
 <script>
+var managerTimer = null;
 window.onload = function () {
+  clearInterval(managerTimer);
   hljs.configure({ languages: ['xml', 'js', 'css'] });
-  setInterval(highlightCode, 100);
+  managerTimer = setInterval(function() { checkUpdate('manager'); }, 100);
 };
 </script>

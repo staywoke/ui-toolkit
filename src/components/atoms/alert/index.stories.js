@@ -1,18 +1,20 @@
 import VueInfoAddon from 'storybook-addon-vue-info'
+import Centered from '@storybook/addon-centered'
 
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withMarkdownNotes } from '@storybook/addon-notes';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withMarkdownNotes } from '@storybook/addon-notes'
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue'
 
-import Component from '.';
-import README from './README.md';
+import Component from '.'
+import README from './README.md'
 
-const stories = storiesOf('Atoms | Alert', module);
+const stories = storiesOf('Atoms | Alert', module)
 
-stories.addDecorator(VueInfoAddon);
-stories.addDecorator(withKnobs);
-stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context));
+stories.addDecorator(VueInfoAddon)
+stories.addDecorator(Centered)
+stories.addDecorator(withKnobs)
+stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
 stories.add('Component Overview', () => {
   const types = select(
@@ -25,15 +27,15 @@ stories.add('Component Overview', () => {
       'error': 'error'
     },
     ''
-  );
+  )
 
-  const title = text('Title', 'Message Text');
-  const description = text('Description', '');
-  const closeText = text('Close Text', '');
+  const title = text('Title', 'Message Text')
+  const description = text('Description', '')
+  const closeText = text('Close Text', '')
 
-  const closable = boolean('Closable', true);
-  const center = boolean('Center', false);
-  const showIcon = boolean('Show Icon', false);
+  const closable = boolean('Closable', true)
+  const center = boolean('Center', false)
+  const showIcon = boolean('Show Icon', false)
 
   let attributes = ''
 
@@ -50,7 +52,7 @@ stories.add('Component Overview', () => {
   return {
     template: `<el-alert ${attributes} @close="actionLogger"></el-alert>`,
     methods: {
-      actionLogger: action('Alert Closed'),
+      actionLogger: action('Alert Closed')
     }
   }
 })

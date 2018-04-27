@@ -1,20 +1,20 @@
 import VueInfoAddon from 'storybook-addon-vue-info'
-import Centered from '@storybook/addon-centered';
+import Centered from '@storybook/addon-centered'
 
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withMarkdownNotes } from '@storybook/addon-notes';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withMarkdownNotes } from '@storybook/addon-notes'
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue'
 
-import Component from '.';
-import README from './README.md';
+import Component from '.'
+import README from './README.md'
 
-const stories = storiesOf('Atoms | Button', module);
+const stories = storiesOf('Atoms | Button', module)
 
-stories.addDecorator(VueInfoAddon);
-stories.addDecorator(Centered);
-stories.addDecorator(withKnobs);
-stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context));
+stories.addDecorator(VueInfoAddon)
+stories.addDecorator(Centered)
+stories.addDecorator(withKnobs)
+stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
 stories.add('Component Overview', () => {
   const types = select(
@@ -29,7 +29,7 @@ stories.add('Component Overview', () => {
       'text': 'text'
     },
     ''
-  );
+  )
 
   const sizes = select(
     'Size',
@@ -40,7 +40,7 @@ stories.add('Component Overview', () => {
       'mini': 'mini'
     },
     ''
-  );
+  )
 
   const icons = select(
     'Icon',
@@ -118,7 +118,7 @@ stories.add('Component Overview', () => {
       'el-icon-zoom-out': 'zoom-out'
     },
     ''
-  );
+  )
 
   const iconPlacement = select(
     'Icon Placement',
@@ -128,7 +128,7 @@ stories.add('Component Overview', () => {
       'right': 'right'
     },
     ''
-  );
+  )
 
   const nativeType = select(
     'Native Type',
@@ -139,16 +139,16 @@ stories.add('Component Overview', () => {
       'reset': 'reset'
     },
     ''
-  );
+  )
 
-  const label = text('Label', 'Button');
+  const label = text('Label', 'Button')
 
-  const plain = boolean('Plain', false);
-  const round = boolean('Round', false);
-  const circle = boolean('Circle', false);
-  const loading = boolean('Loading', false);
-  const disabled = boolean('Disabled', false);
-  const autofocus = boolean('Auto Focus', false);
+  const plain = boolean('Plain', false)
+  const round = boolean('Round', false)
+  const circle = boolean('Circle', false)
+  const loading = boolean('Loading', false)
+  const disabled = boolean('Disabled', false)
+  const autofocus = boolean('Auto Focus', false)
 
   let attributes = ''
   let embeddedIcon = ''
@@ -181,6 +181,24 @@ stories.add('Component Overview', () => {
 stories.add('› Default', () => {
   return {
     template: '<el-button type="primary">Primary</el-button>'
+  }
+})
+
+stories.add('› Size Medium', () => {
+  return {
+    template: '<el-button type="primary" size="medium">Primary</el-button>'
+  }
+})
+
+stories.add('› Size Small', () => {
+  return {
+    template: '<el-button type="primary" size="small">Primary</el-button>'
+  }
+})
+
+stories.add('› Size Mini', () => {
+  return {
+    template: '<el-button type="primary" size="mini">Primary</el-button>'
   }
 })
 

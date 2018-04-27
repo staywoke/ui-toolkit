@@ -1,13 +1,14 @@
 Atom › Alert
 ---
+> The following is a quick example of how to use this component.
 
-The following is a quick example of how to use this component.
 
 #### Template:
 
 ```xml
 <el-alert type="success" title="Message Text" showIcon @close="handleClose"></el-alert>
 ```
+
 
 #### Script:
 ```js
@@ -26,6 +27,7 @@ export default {
   }
 }
 ```
+
 
 #### Documentation:
 
