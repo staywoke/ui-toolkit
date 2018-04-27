@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { Col } from 'element-ui';
+import { Col } from 'element-ui'
 
-Vue.component('el-col', Col);
+Vue.component('el-col', Col)
 
-export default { extends: Col };
+export default { extends: Col }
 </script>

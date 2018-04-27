@@ -1,11 +1,13 @@
 import VueInfoAddon from 'storybook-addon-vue-info'
 
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
-import { withKnobs, text, boolean, select, number } from '@storybook/addon-knobs/vue'
+import { withKnobs, text, number } from '@storybook/addon-knobs/vue'
 
+/* eslint-disable-next-line no-unused-vars */
 import Component from '.'
+
+/* eslint-disable-next-line no-unused-vars */
 import Row from '../row'
 
 import README from './README.md'

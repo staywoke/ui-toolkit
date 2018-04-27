@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { Alert } from 'element-ui';
+import { Alert } from 'element-ui'
 
-Vue.component('el-alert', Alert);
+Vue.component('el-alert', Alert)
 
-export default { extends: Alert };
+export default { extends: Alert }
 </script>

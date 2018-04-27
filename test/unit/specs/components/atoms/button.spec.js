@@ -38,7 +38,7 @@ describe('Component › Atom › Button', () => {
 
     let elm = vm.$el
 
-    expect(elm.getAttribute('type')).toEqual('submit');
+    expect(elm.getAttribute('type')).toEqual('submit')
   })
 
   it('loading', () => {
@@ -121,7 +121,7 @@ describe('Component › Atom › Button', () => {
   })
 
   it('click', () => {
-    let clicked = false;
+    let clicked = false
 
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -129,7 +129,7 @@ describe('Component › Atom › Button', () => {
         circle: true
       },
       methods: {
-        handleClick() {
+        handleClick () {
           clicked = true
         }
       }

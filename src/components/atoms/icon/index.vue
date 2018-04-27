@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { Icon } from 'element-ui';
+import { Icon } from 'element-ui'
 
-Vue.component('el-icon', Icon);
+Vue.component('el-icon', Icon)
 
-export default { extends: Icon };
+export default { extends: Icon }
 </script>

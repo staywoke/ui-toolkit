@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { CheckboxButton } from 'element-ui';
+import { CheckboxButton } from 'element-ui'
 
-Vue.component('el-checkbox-button', CheckboxButton);
+Vue.component('el-checkbox-button', CheckboxButton)
 
-export default { extends: CheckboxButton };
+export default { extends: CheckboxButton }
 </script>

@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { ButtonGroup } from 'element-ui';
+import { ButtonGroup } from 'element-ui'
 
-Vue.component('el-button-group', ButtonGroup);
+Vue.component('el-button-group', ButtonGroup)
 
-export default { extends: ButtonGroup };
+export default { extends: ButtonGroup }
 </script>

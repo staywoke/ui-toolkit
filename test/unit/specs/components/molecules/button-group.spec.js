@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import Alert from '@/components/molecules/button-group'
+import ButtonGroup from '@/components/molecules/button-group'
 
 describe('Component › Molecules › Button Group', () => {
   it('create', () => {
-    const Constructor = Vue.extend(Alert)
+    const Constructor = Vue.extend(ButtonGroup)
     const vm = new Constructor().$mount()
 
     let elm = vm.$el

@@ -6,10 +6,11 @@ import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs, text, boolean, select, color } from '@storybook/addon-knobs/vue'
 
+/* eslint-disable-next-line no-unused-vars */
 import Component from '.'
 import README from './README.md'
 
-const stories = storiesOf('Atoms | Radio Group', module)
+const stories = storiesOf('Molecules | Radio Group', module)
 
 stories.addDecorator(VueInfoAddon)
 stories.addDecorator(Centered)
@@ -39,8 +40,8 @@ stories.add('Component Overview', () => {
     'a'
   )
 
-  const textColor = color('Text Color', '#ffffff');
-  const fillColor = color('Fill Color', '#409EFF');
+  const textColor = color('Text Color', '#ffffff')
+  const fillColor = color('Fill Color', '#409EFF')
   const disabled = boolean('Disabled', false)
 
   let attributes = ''
@@ -122,7 +123,7 @@ stories.add('› Size Small', () => {
       <el-radio-button label="b">Option B</el-radio-button>
       <el-radio-button label="c">Option C</el-radio-button>
     </el-radio-group>`,
-        data () {
+    data () {
       return {
         radio: 'a'
       }

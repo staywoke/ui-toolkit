@@ -6,10 +6,11 @@ import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs, text, boolean, select, color, number } from '@storybook/addon-knobs/vue'
 
+/* eslint-disable-next-line no-unused-vars */
 import Component from '.'
 import README from './README.md'
 
-const stories = storiesOf('Atoms | Checkbox Group', module)
+const stories = storiesOf('Molecules | Checkbox Group', module)
 
 stories.addDecorator(VueInfoAddon)
 stories.addDecorator(Centered)
@@ -126,7 +127,7 @@ stories.add('› Size Small', () => {
       <el-checkbox-button label="b">Option B</el-checkbox-button>
       <el-checkbox-button label="c">Option C</el-checkbox-button>
     </el-checkbox-group>`,
-        data () {
+    data () {
       return {
         checked: ['a']
       }
@@ -189,7 +190,7 @@ stories.add('› Indeterminate', () => {
         <el-checkbox v-for="option in options" :label="option" :key="option">{{ option }}</el-checkbox>
       </el-checkbox-group>
     </el-row>`,
-    data() {
+    data () {
       return {
         checkAll: false,
         checked: ['Option A'],
@@ -198,11 +199,11 @@ stories.add('› Indeterminate', () => {
       }
     },
     methods: {
-      handleCheckAllChange(val) {
+      handleCheckAllChange (val) {
         this.checked = val ? options : []
         this.isIndeterminate = false
       },
-      handleCheckedOptionsChange(value) {
+      handleCheckedOptionsChange (value) {
         let checkedCount = value.length
         this.checkAll = checkedCount === this.options.length
         this.isIndeterminate = checkedCount > 0 && checkedCount < this.options.length
@@ -218,7 +219,7 @@ stories.add('› Limit Checked', () => {
     template: `<el-checkbox-group v-model="checked" :min="1" :max="2">
       <el-checkbox v-for="option in options" :label="option" :key="option">{{ option }}</el-checkbox>
     </el-checkbox-group>`,
-    data() {
+    data () {
       return {
         checked: ['Option A'],
         options: options

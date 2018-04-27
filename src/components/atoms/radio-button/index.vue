@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { RadioButton } from 'element-ui';
+import { RadioButton } from 'element-ui'
 
-Vue.component('el-radio-button', RadioButton);
+Vue.component('el-radio-button', RadioButton)
 
-export default { extends: RadioButton };
+export default { extends: RadioButton }
 </script>

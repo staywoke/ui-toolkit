@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs, boolean, select } from '@storybook/addon-knobs/vue'
 
+/* eslint-disable-next-line no-unused-vars */
 import Component from '.'
 import README from './README.md'
 

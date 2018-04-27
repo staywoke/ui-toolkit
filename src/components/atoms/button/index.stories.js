@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/vue'
 
+/* eslint-disable-next-line no-unused-vars */
 import Component from '.'
 import README from './README.md'
 
@@ -173,7 +174,7 @@ stories.add('Component Overview', () => {
   return {
     template: `<el-button ${attributes} @click="actionLogger">${label} ${embeddedIcon}</el-button>`,
     methods: {
-      actionLogger: action('Button Clicked'),
+      actionLogger: action('Button Clicked')
     }
   }
 })

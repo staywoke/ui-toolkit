@@ -1,9 +1,9 @@
 <script>
-import Vue from 'vue';
+import Vue from 'vue'
 
-import { Radio } from 'element-ui';
+import { Radio } from 'element-ui'
 
-Vue.component('el-radio', Radio);
+Vue.component('el-radio', Radio)
 
-export default { extends: Radio };
+export default { extends: Radio }
 </script>

@@ -1,4 +1,3 @@
-import VueInfoAddon from 'storybook-addon-vue-info'
 import Centered from '@storybook/addon-centered'
 
 import { storiesOf } from '@storybook/vue'
@@ -13,5 +12,5 @@ stories.addDecorator(Centered)
 stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
 stories.add('Getting Started', () => ({
-  render: h => h(Welcome),
+  render: h => h(Welcome)
 }))

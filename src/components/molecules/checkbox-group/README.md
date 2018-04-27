@@ -41,4 +41,4 @@ export default {
 #### Documentation:
 
 * [Checkbox Component Docs](http://element.eleme.io/#/en-US/component/checkbox)
-* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/checkbox-group)
+* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/molecules/checkbox-group)

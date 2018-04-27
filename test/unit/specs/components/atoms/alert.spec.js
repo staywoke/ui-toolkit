@@ -44,11 +44,11 @@ describe('Component › Atom › Alert', () => {
 
     let elm = vm.$el
 
-    expect(elm.querySelector('.el-alert__description').textContent).toEqual('This is a Test Description');
+    expect(elm.querySelector('.el-alert__description').textContent).toEqual('This is a Test Description')
   })
 
   it('close', () => {
-    let closed = false;
+    let closed = false
 
     const Constructor = Vue.extend(Alert)
     const vm = new Constructor({
@@ -56,7 +56,7 @@ describe('Component › Atom › Alert', () => {
         title: 'Test Title'
       },
       methods: {
-        close() {
+        close () {
           closed = true
         }
       }

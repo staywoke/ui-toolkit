@@ -41,4 +41,4 @@ export default {
 #### Documentation:
 
 * [Radio Component Docs](http://element.eleme.io/#/en-US/component/radio)
-* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/radio)
+* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/molecules/radio)
