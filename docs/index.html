@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="storybook-version" content="4.0.0-alpha.1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Storybook</title>
+    <style>
+        /*
+          When resizing panels, the drag event breaks if the cursor
+          moves over the iframe. Add the 'dragging' class to the body
+          at drag start and remove it when the drag ends.
+         */
+        .dragging iframe {
+            pointer-events: none;
+        }
+
+        /* Styling the fuzzy search box placeholders */
+        .searchBox::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .searchBox::-moz-placeholder { /* Firefox 19+ */
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .searchBox:focus{
+            border-color: #EEE !important;
+        }
+
+        .btn:hover{
+            background-color: #eee
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/color-brewer.min.css">
+<script src="assets/js/highlight.min.js"></script>
+<script src="assets/js/beautify.min.js"></script>
+<script src="assets/js/beautify-css.min.js"></script>
+<script src="assets/js/beautify-html.min.js"></script>
+<script src="assets/js/site.js"></script>
+
+<style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#storybook-preview-iframe {
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0 !important;
+}
+.highlighted {
+  background: #fdfdfd;
+  padding: 14px;
+  border: 1px solid #eaeaea;
+}
+.Pane .Pane2 div[role="tabpanel"] {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+.Pane .Pane2 div[role="tabpanel"] h2 {
+  color: #333 !important;
+}
+.Pane .Pane2 div[role="tabpanel"] h4 {
+  margin-top: 40px;
+}
+.Pane .Pane2 div[role="tabpanel"] br {
+  display: none !important;
+  line-height: 0 !important;
+}
+.Pane .Pane2 div[role="tabpanel"] a {
+  color: #409dff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.Pane .Pane2 div[role="tabpanel"] a:hover {
+  text-decoration: underline;
+}
+.Pane .Pane2 div[role="tabpanel"] p {
+  color: #666;
+  font-size: 16px;
+}
+
+.Pane .Pane2 div[role="tablist"] button:focus {
+  outline: none !important;
+}
+
+.Pane .Pane2 div[role="tabpanel"] form label {
+  width: 125px !important;
+}
+.Pane .Pane2 div[role="tabpanel"] form {
+  margin-top: 50px;
+}
+.Pane .Pane2 div[role="tabpanel"] form::before {
+  content: 'Use the Form below to Dynamically Generate Markup for this Component.';
+  position: absolute;
+  width: calc(100% - 50px);
+  left: 10px;
+  top: 10px;
+  background: #fdfdfd;
+  padding: 14px;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.Pane .Pane2 div[role="tabpanel"] h1,
+.Pane .Pane2 div[role="tabpanel"] h2,
+.Pane .Pane2 div[role="tabpanel"] h3,
+.Pane .Pane2 div[role="tabpanel"] h4,
+.Pane .Pane2 div[role="tabpanel"] h5,
+.Pane .Pane2 div[role="tabpanel"] h6 {
+  color: rgb(130, 130, 130);
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.Pane .Pane2 div[role="tabpanel"] p:empty {
+  display: none !important;
+  line-height: 0 !important;
+}
+
+.Pane .Pane2 pre[class^='css-glamorous-pre'] > div[class^='css-glamorous-div'] > div[class^='css-glamorous-div'] > li {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+
+.Pane .Pane2 pre[class^='css-glamorous-pre'] > div[class^='css-glamorous-div']:first-of-type > div[class^='css-glamorous-div'] > li {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.Pane .Pane2 select {
+  -webkit-appearance: none;
+}
+
+.Pane.horizontal.Pane2 pre {
+  opacity: 0;
+}
+
+.Pane.horizontal.Pane2 pre.highlighted,
+.Pane.horizontal.Pane2 pre[class^='css-glamorous-pre'] {
+  opacity: 1;
+}
+
+.Pane.horizontal.Pane2 blockquote {
+  border: 1px solid #eaeaea;
+  border-left: 4px solid #d5d5d5;
+  margin: 0;
+  padding-left: 20px;
+  background: #fdfdfd;
+  color: #000;
+}
+
+.Pane.horizontal.Pane2 ul {
+  margin-left: 18px;
+  padding: 0;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li:first-child a:first-of-type {
+  color: #333;
+  font-weight: 500;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li:first-child a:first-of-type::before {
+  content: '\2606';
+  position: absolute;
+  left: -19px;
+  color: #cecece;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li a[class^='css-glamorous-routedlink'] {
+  background: #f7f7f7;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+}
+
+.Pane.vertical.Pane1 ul li ul li ul li a[class^='css-glamorous-routedlink']:hover {
+  background: #FFF;
+}
+
+.css-glamorous-routedlink--1cigum0, .css-glamorous-routedlink--1cigum0:hover {
+  background: #444 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+</style>
+
+<script>
+var managerTimer = null;
+window.onload = function () {
+  clearInterval(managerTimer);
+  hljs.configure({ languages: ['xml', 'js', 'css'] });
+  managerTimer = setInterval(function() { checkUpdate('manager'); }, 100);
+};
+</script>
+
+
+</head>
+<body style="margin: 0;">
+    <div id="root"></div>
+<script type="text/javascript" src="static/manager.6b069d10dbccdbddb84c.bundle.js"></script></body>
+</html>
