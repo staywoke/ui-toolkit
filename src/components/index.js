@@ -7,16 +7,16 @@ import CheckboxButton from './atoms/checkbox-button'
 import Icon from './atoms/icon'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
-import ButtonGroup from './molecules/button-group'
-import CheckboxGroup from './molecules/checkbox-group'
-import Col from './molecules/col'
-import RadioGroup from './molecules/radio-group'
-import Row from './molecules/row'
 import Aside from './organisms/aside'
 import Container from './organisms/container'
 import Footer from './organisms/footer'
 import Header from './organisms/header'
 import Main from './organisms/main'
+import ButtonGroup from './molecules/button-group'
+import CheckboxGroup from './molecules/checkbox-group'
+import Col from './molecules/col'
+import RadioGroup from './molecules/radio-group'
+import Row from './molecules/row'
 
 export {
   Alert,
@@ -26,14 +26,14 @@ export {
   Icon,
   Radio,
   RadioButton,
-  ButtonGroup,
-  CheckboxGroup,
-  Col,
-  RadioGroup,
-  Row,
   Aside,
   Container,
   Footer,
   Header,
-  Main
+  Main,
+  ButtonGroup,
+  CheckboxGroup,
+  Col,
+  RadioGroup,
+  Row
 }

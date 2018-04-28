@@ -12,7 +12,7 @@ Overview
 
 This project is the home for all StayWoke Vue.js 2 Components in our UI Toolkit. It is not set up to be a complete Web Application, but rather a collection of parts you can use to speed up development of your own.
 
-#### [View Components ⇨](http://ui-toolkit.staywoke.org)
+#### [View Components ⇨](https://staywoke.github.io/ui-toolkit)
 
 
 
