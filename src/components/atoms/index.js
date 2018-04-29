@@ -5,7 +5,9 @@ import Badge from './badge'
 import Button from './button'
 import Checkbox from './checkbox'
 import CheckboxButton from './checkbox-button'
+import ColorPicker from './color-picker'
 import Icon from './icon'
+import Input from './input'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Tag from './tag'
@@ -16,7 +18,9 @@ export {
   Button,
   Checkbox,
   CheckboxButton,
+  ColorPicker,
   Icon,
+  Input,
   Radio,
   RadioButton,
   Tag

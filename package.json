@@ -20,7 +20,7 @@
     "unit": "jest --verbose --config test/unit/jest.conf.js --coverage",
     "unit:single": "node ./node_modules/jest/bin/jest.js --verbose --config test/unit/jest.conf.js",
     "test": "npm run -s lint && npm run -s unit",
-    "lint": "eslint --ext .js,.vue src test/unit && echo '\n【ツ】CODE FORMATTING PERFECTION !!!\n'",
+    "lint": "eslint --ext .js,.vue src test/unit --fix && echo '\n【ツ】CODE FORMATTING PERFECTION !!!\n'",
     "build": "npm run -s build:entry && npm run -s storybook:build && node build/build.js",
     "build:entry": "node build/bin/build-entry.js",
     "storybook": "npm run -s build:entry && start-storybook -s ./.storybook/static -p 9001 -c .storybook",

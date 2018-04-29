@@ -104,6 +104,17 @@ stories.add('› Tag Set', () => {
   return {
     template: `<el-container>
       <el-tag :key="tag.name" v-for="tag in tags" :type="tag.type" closable @close="handleClose(tag.name)">{{ tag.name }}</el-tag>
+      <el-input
+        class="input-new-tag"
+        v-if="inputVisible"
+        v-model="inputValue"
+        ref="saveTagInput"
+        size="mini"
+        @keyup.enter.native="handleInputConfirm"
+        @blur="handleInputConfirm"
+      >
+      </el-input>
+      <el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>
     </el-container>`,
     data () {
       return {
@@ -113,13 +124,29 @@ stories.add('› Tag Set', () => {
           { name: 'Tag 3', type: 'info' },
           { name: 'Tag 4', type: 'warning' },
           { name: 'Tag 5', type: 'danger' }
-        ]
+        ],
+        inputVisible: false,
+        inputValue: ''
       }
     },
     methods: {
       handleClose (name) {
         const index = this.tags.findIndex(tag => tag.name === name)
         this.tags.splice(index, 1)
+      },
+      showInput () {
+        this.inputVisible = true
+        this.$nextTick(_ => {
+          this.$refs.saveTagInput.$refs.input.focus()
+        })
+      },
+      handleInputConfirm () {
+        let inputValue = this.inputValue
+        if (inputValue) {
+          this.tags.push({ name: inputValue, type: '' })
+        }
+        this.inputVisible = false
+        this.inputValue = ''
       }
     }
   }

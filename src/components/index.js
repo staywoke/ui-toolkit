@@ -5,20 +5,22 @@ import Badge from './atoms/badge'
 import Button from './atoms/button'
 import Checkbox from './atoms/checkbox'
 import CheckboxButton from './atoms/checkbox-button'
+import ColorPicker from './atoms/color-picker'
 import Icon from './atoms/icon'
+import Input from './atoms/input'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import Tag from './atoms/tag'
-import Aside from './organisms/aside'
-import Container from './organisms/container'
-import Footer from './organisms/footer'
-import Header from './organisms/header'
-import Main from './organisms/main'
 import ButtonGroup from './molecules/button-group'
 import CheckboxGroup from './molecules/checkbox-group'
 import Col from './molecules/col'
 import RadioGroup from './molecules/radio-group'
 import Row from './molecules/row'
+import Aside from './organisms/aside'
+import Container from './organisms/container'
+import Footer from './organisms/footer'
+import Header from './organisms/header'
+import Main from './organisms/main'
 
 export {
   Alert,
@@ -26,18 +28,20 @@ export {
   Button,
   Checkbox,
   CheckboxButton,
+  ColorPicker,
   Icon,
+  Input,
   Radio,
   RadioButton,
   Tag,
-  Aside,
-  Container,
-  Footer,
-  Header,
-  Main,
   ButtonGroup,
   CheckboxGroup,
   Col,
   RadioGroup,
-  Row
+  Row,
+  Aside,
+  Container,
+  Footer,
+  Header,
+  Main
 }

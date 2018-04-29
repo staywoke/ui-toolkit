@@ -6,7 +6,7 @@ Atom › Tag
 #### Template:
 
 ```xml
-<el-tag>Tag</el-tag>
+<el-tag :key="tag.name" v-for="tag in tags" :type="tag.type" closable @close="handleClose(tag.name)">{{ tag.name }}</el-tag>
 ```
 
 
@@ -18,6 +18,23 @@ export default {
   name: 'MyComponent',
   components: {
     Tag
+  },
+  data () {
+    return {
+      tags: [
+        { name: 'Tag 1', type: '' },
+        { name: 'Tag 2', type: 'success' },
+        { name: 'Tag 3', type: 'info' },
+        { name: 'Tag 4', type: 'warning' },
+        { name: 'Tag 5', type: 'danger' }
+      ]
+    }
+  },
+  methods: {
+    handleClose (name) {
+      const index = this.tags.findIndex(tag => tag.name === name);
+      this.tags.splice(index, 1);
+    }
   }
 }
 ```
