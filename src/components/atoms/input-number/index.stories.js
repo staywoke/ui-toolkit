@@ -60,7 +60,7 @@ stories.add('Component Overview', () => {
 
   return {
     template: `<el-input-number ${attributes}
-      placeholder="Pleceholder"
+      placeholder="Placeholder"
       v-model="input"
       @blur="blurHandler"
       @focus="focusHandler"
