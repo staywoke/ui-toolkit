@@ -190,6 +190,25 @@ body {
   color: #fff !important;
   font-weight: 500 !important;
 }
+
+.collapse-all {
+  position: absolute;
+  color: #828282;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: right;
+  width: 100%;
+  display: block;
+  top: 30px;
+  left: 0;
+  transition: color 0.25s ease-in-out;
+  padding: 10px 0;
+}
+.collapse-all:hover {
+  color: #333;
+}
 </style>
 
 <script>
@@ -198,5 +217,31 @@ window.onload = function () {
   clearInterval(managerTimer);
   hljs.configure({ languages: ['xml', 'js', 'css'] });
   managerTimer = setInterval(function() { checkUpdate('manager'); }, 100);
+
+  var $filter = document.querySelector('input[name="filter-text"]');
+
+  var a = document.createElement('a');
+  var linkText = document.createTextNode('Collapse All');
+  a.appendChild(linkText);
+  a.title = 'Collapse All Components';
+  a.href = '#';
+  a.className = 'collapse-all';
+  a.onclick = function (evt) {
+    evt.preventDefault();
+    collapseAll();
+    return false;
+  }
+
+  $filter.parentNode.insertBefore(a, $filter.nextSibling);
 };
+
+function collapseAll () {
+  var menuItems = document.querySelectorAll('div[role="menuitem"]');
+
+  for (var i = 0; i < menuItems.length; i++){
+    if (menuItems[i].nextSibling.innerHTML !== '') {
+      menuItems[i].click();
+    }
+  }
+}
 </script>

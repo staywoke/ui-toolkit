@@ -50,10 +50,14 @@ function highlightCode(samples) {
       samples[i].classList.add('highlighted');
       samples[i].style.opacity = 1;
 
-      document.querySelector('.vue-info .code').classList.remove('open');
-      document.querySelector('.vue-info .props').classList.remove('open');
-      document.querySelector('#toggle-code').classList.remove('active');
-      document.querySelector('#toggle-props').classList.remove('active');
+      if (document.querySelector('#toggle-code')) {
+        document.querySelector('.vue-info .code').classList.remove('open');
+        document.querySelector('.vue-info .props').classList.remove('open');
+        document.querySelector('#toggle-code').classList.remove('active');
+        document.querySelector('#toggle-props').classList.remove('active');
+        document.querySelector('#toggle-code').style.display = 'block';
+        document.querySelector('#toggle-props').style.display = 'block';
+      }
     }
   }
 }
@@ -92,6 +96,8 @@ function checkUpdate (win) {
   target = win;
 
   var sample;
+  var $code = document.querySelector('#toggle-code');
+  var $props = document.querySelector('#toggle-props');
 
   if (target === 'manager') {
     samples = document.querySelectorAll('.Pane.horizontal.Pane2 pre');
@@ -103,11 +109,21 @@ function checkUpdate (win) {
   if (samples.length > 0 && currentComponent !== previousComponent[target]) {
     previousComponent[target] = currentComponent;
 
+    if ($code && $props) {
+      $code.style.display = 'none';
+      $props.style.display = 'none';
+    }
+
     updatePageTitle();
     externallinks();
     updatePageTitle();
     highlightCode(samples);
 
     setInterval(function() { highlightCode(samples); }, 100);
+  } else if (samples.length === 0 && currentComponent !== previousComponent[target]) {
+    if ($code && $props) {
+      $code.style.display = 'none';
+      $props.style.display = 'none';
+    }
   }
 }
