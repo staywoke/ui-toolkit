@@ -49,6 +49,11 @@ function highlightCode(samples) {
       samples[i].innerHTML = output;
       samples[i].classList.add('highlighted');
       samples[i].style.opacity = 1;
+
+      document.querySelector('.vue-info .code').classList.remove('open');
+      document.querySelector('.vue-info .props').classList.remove('open');
+      document.querySelector('#toggle-code').classList.remove('active');
+      document.querySelector('#toggle-props').classList.remove('active');
     }
   }
 }
