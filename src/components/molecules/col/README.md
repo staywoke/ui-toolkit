@@ -51,4 +51,4 @@ export default {
 #### Documentation:
 
 * [Col Component Docs](http://element.eleme.io/#/en-US/component/layout#col-attributes)
-* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/col)
+* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/molecules/col)

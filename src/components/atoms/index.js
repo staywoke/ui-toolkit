@@ -12,6 +12,7 @@ import Input from './input'
 import InputNumber from './input-number'
 import Radio from './radio'
 import RadioButton from './radio-button'
+import Switch from './switch'
 import Tag from './tag'
 
 export {
@@ -27,5 +28,6 @@ export {
   InputNumber,
   Radio,
   RadioButton,
+  Switch,
   Tag
 }
