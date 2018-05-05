@@ -4,9 +4,9 @@ import Alert from './alert'
 import Autocomplete from './autocomplete'
 import Badge from './badge'
 import BreadcrumbItem from './breadcrumb-item'
+import Button from './button'
 import CarouselItem from './carousel-item'
 import Checkbox from './checkbox'
-import Button from './button'
 import CheckboxButton from './checkbox-button'
 import ColorPicker from './color-picker'
 import Icon from './icon'
@@ -22,9 +22,9 @@ export {
   Autocomplete,
   Badge,
   BreadcrumbItem,
+  Button,
   CarouselItem,
   Checkbox,
-  Button,
   CheckboxButton,
   ColorPicker,
   Icon,

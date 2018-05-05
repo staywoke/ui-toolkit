@@ -4,9 +4,9 @@ import Alert from './atoms/alert'
 import Autocomplete from './atoms/autocomplete'
 import Badge from './atoms/badge'
 import BreadcrumbItem from './atoms/breadcrumb-item'
+import Button from './atoms/button'
 import CarouselItem from './atoms/carousel-item'
 import Checkbox from './atoms/checkbox'
-import Button from './atoms/button'
 import CheckboxButton from './atoms/checkbox-button'
 import ColorPicker from './atoms/color-picker'
 import Icon from './atoms/icon'
@@ -16,6 +16,12 @@ import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
+import Aside from './organisms/aside'
+import Container from './organisms/container'
+import Footer from './organisms/footer'
+import Header from './organisms/header'
+import Main from './organisms/main'
+import MapBlock from './organisms/map-block'
 import Breadcrumb from './molecules/breadcrumb'
 import ButtonGroup from './molecules/button-group'
 import Carousel from './molecules/carousel'
@@ -24,21 +30,15 @@ import CheckboxGroup from './molecules/checkbox-group'
 import Col from './molecules/col'
 import RadioGroup from './molecules/radio-group'
 import Row from './molecules/row'
-import Aside from './organisms/aside'
-import Container from './organisms/container'
-import Footer from './organisms/footer'
-import Header from './organisms/header'
-import Main from './organisms/main'
-import MapBlock from './organisms/map-block'
 
 export {
   Alert,
   Autocomplete,
   Badge,
   BreadcrumbItem,
+  Button,
   CarouselItem,
   Checkbox,
-  Button,
   CheckboxButton,
   ColorPicker,
   Icon,
@@ -48,6 +48,12 @@ export {
   RadioButton,
   Switch,
   Tag,
+  Aside,
+  Container,
+  Footer,
+  Header,
+  Main,
+  MapBlock,
   Breadcrumb,
   ButtonGroup,
   Carousel,
@@ -55,11 +61,5 @@ export {
   CheckboxGroup,
   Col,
   RadioGroup,
-  Row,
-  Aside,
-  Container,
-  Footer,
-  Header,
-  Main,
-  MapBlock
+  Row
 }
