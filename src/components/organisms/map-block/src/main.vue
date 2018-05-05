@@ -2,178 +2,178 @@
   <el-container class="sw-map-block" :class="[ mapSize ? 'sw-map-block--' + mapSize : '', hiddenLabels ? 'hide-labels' : '' ]">
     <el-row :gutter="0">
       <el-col :span="2" :offset="22">
-        <el-button plain @click.prevent="handleClick('ME')" :class="getClassNames('ME')">ME</el-button>
+        <el-button plain @click="handleClick('ME')" :class="getClassNames('ME')">ME</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="12">
-        <el-button plain @click.prevent="handleClick('WI')" :class="getClassNames('WI')">WI</el-button>
+        <el-button plain @click="handleClick('WI')" :class="getClassNames('WI')">WI</el-button>
       </el-col>
       <el-col :span="2" :offset="6">
-        <el-button plain @click.prevent="handleClick('VT')" :class="getClassNames('VT')">VT</el-button>
+        <el-button plain @click="handleClick('VT')" :class="getClassNames('VT')">VT</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NH')" :class="getClassNames('NH')">NH</el-button>
+        <el-button plain @click="handleClick('NH')" :class="getClassNames('NH')">NH</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="2">
-        <el-button plain @click.prevent="handleClick('WA')" :class="getClassNames('WA')">WA</el-button>
+        <el-button plain @click="handleClick('WA')" :class="getClassNames('WA')">WA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('ID')" :class="getClassNames('ID')">ID</el-button>
+        <el-button plain @click="handleClick('ID')" :class="getClassNames('ID')">ID</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MT')" :class="getClassNames('MT')">MT</el-button>
+        <el-button plain @click="handleClick('MT')" :class="getClassNames('MT')">MT</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('ND')" :class="getClassNames('ND')">ND</el-button>
+        <el-button plain @click="handleClick('ND')" :class="getClassNames('ND')">ND</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MN')" :class="getClassNames('MN')">MN</el-button>
+        <el-button plain @click="handleClick('MN')" :class="getClassNames('MN')">MN</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('IL')" :class="getClassNames('IL')">IL</el-button>
+        <el-button plain @click="handleClick('IL')" :class="getClassNames('IL')">IL</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MI')" :class="getClassNames('MI')">MI</el-button>
+        <el-button plain @click="handleClick('MI')" :class="getClassNames('MI')">MI</el-button>
       </el-col>
       <el-col :span="2" :offset="2">
-        <el-button plain @click.prevent="handleClick('NY')" :class="getClassNames('NY')">NY</el-button>
+        <el-button plain @click="handleClick('NY')" :class="getClassNames('NY')">NY</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MA')" :class="getClassNames('MA')">MA</el-button>
+        <el-button plain @click="handleClick('MA')" :class="getClassNames('MA')">MA</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="2">
-        <el-button plain @click.prevent="handleClick('OR')" :class="getClassNames('OR')">OR</el-button>
+        <el-button plain @click="handleClick('OR')" :class="getClassNames('OR')">OR</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NV')" :class="getClassNames('NV')">NV</el-button>
+        <el-button plain @click="handleClick('NV')" :class="getClassNames('NV')">NV</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('WY')" :class="getClassNames('WY')">WY</el-button>
+        <el-button plain @click="handleClick('WY')" :class="getClassNames('WY')">WY</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('SD')" :class="getClassNames('SD')">SD</el-button>
+        <el-button plain @click="handleClick('SD')" :class="getClassNames('SD')">SD</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('IA')" :class="getClassNames('IA')">IA</el-button>
+        <el-button plain @click="handleClick('IA')" :class="getClassNames('IA')">IA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('IN')" :class="getClassNames('IN')">IN</el-button>
+        <el-button plain @click="handleClick('IN')" :class="getClassNames('IN')">IN</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('OH')" :class="getClassNames('OH')">OH</el-button>
+        <el-button plain @click="handleClick('OH')" :class="getClassNames('OH')">OH</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('PA')" :class="getClassNames('PA')">PA</el-button>
+        <el-button plain @click="handleClick('PA')" :class="getClassNames('PA')">PA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NJ')" :class="getClassNames('NJ')">NJ</el-button>
+        <el-button plain @click="handleClick('NJ')" :class="getClassNames('NJ')">NJ</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('CT')" :class="getClassNames('CT')">CT</el-button>
+        <el-button plain @click="handleClick('CT')" :class="getClassNames('CT')">CT</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('RI')" :class="getClassNames('RI')">RI</el-button>
+        <el-button plain @click="handleClick('RI')" :class="getClassNames('RI')">RI</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="2">
-        <el-button plain @click.prevent="handleClick('CA')" :class="getClassNames('CA')">CA</el-button>
+        <el-button plain @click="handleClick('CA')" :class="getClassNames('CA')">CA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('UT')" :class="getClassNames('UT')">UT</el-button>
+        <el-button plain @click="handleClick('UT')" :class="getClassNames('UT')">UT</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('CO')" :class="getClassNames('CO')">CO</el-button>
+        <el-button plain @click="handleClick('CO')" :class="getClassNames('CO')">CO</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NE')" :class="getClassNames('NE')">NE</el-button>
+        <el-button plain @click="handleClick('NE')" :class="getClassNames('NE')">NE</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MO')" :class="getClassNames('MO')">MO</el-button>
+        <el-button plain @click="handleClick('MO')" :class="getClassNames('MO')">MO</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('KY')" :class="getClassNames('KY')">KY</el-button>
+        <el-button plain @click="handleClick('KY')" :class="getClassNames('KY')">KY</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('WV')" :class="getClassNames('WV')">WV</el-button>
+        <el-button plain @click="handleClick('WV')" :class="getClassNames('WV')">WV</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('VA')" :class="getClassNames('VA')">VA</el-button>
+        <el-button plain @click="handleClick('VA')" :class="getClassNames('VA')">VA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MD')" :class="getClassNames('MD')">MD</el-button>
+        <el-button plain @click="handleClick('MD')" :class="getClassNames('MD')">MD</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('DE')" :class="getClassNames('DE')">DE</el-button>
+        <el-button plain @click="handleClick('DE')" :class="getClassNames('DE')">DE</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="4">
-        <el-button plain @click.prevent="handleClick('AZ')" :class="getClassNames('AZ')">AZ</el-button>
+        <el-button plain @click="handleClick('AZ')" :class="getClassNames('AZ')">AZ</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NM')" :class="getClassNames('NM')">NM</el-button>
+        <el-button plain @click="handleClick('NM')" :class="getClassNames('NM')">NM</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('KS')" :class="getClassNames('KS')">KS</el-button>
+        <el-button plain @click="handleClick('KS')" :class="getClassNames('KS')">KS</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('AR')" :class="getClassNames('AR')">AR</el-button>
+        <el-button plain @click="handleClick('AR')" :class="getClassNames('AR')">AR</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('TN')" :class="getClassNames('TN')">TN</el-button>
+        <el-button plain @click="handleClick('TN')" :class="getClassNames('TN')">TN</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('NC')" :class="getClassNames('NC')">NC</el-button>
+        <el-button plain @click="handleClick('NC')" :class="getClassNames('NC')">NC</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('SC')" :class="getClassNames('SC')">SC</el-button>
+        <el-button plain @click="handleClick('SC')" :class="getClassNames('SC')">SC</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2" :offset="8">
-        <el-button plain @click.prevent="handleClick('OK')" :class="getClassNames('OK')">OK</el-button>
+        <el-button plain @click="handleClick('OK')" :class="getClassNames('OK')">OK</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('LA')" :class="getClassNames('LA')">LA</el-button>
+        <el-button plain @click="handleClick('LA')" :class="getClassNames('LA')">LA</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('MS')" :class="getClassNames('MS')">MS</el-button>
+        <el-button plain @click="handleClick('MS')" :class="getClassNames('MS')">MS</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('AL')" :class="getClassNames('AL')">AL</el-button>
+        <el-button plain @click="handleClick('AL')" :class="getClassNames('AL')">AL</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('GA')" :class="getClassNames('GA')">GA</el-button>
+        <el-button plain @click="handleClick('GA')" :class="getClassNames('GA')">GA</el-button>
       </el-col>
     </el-row>
 
     <el-row :gutter="0">
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('HI')" :class="getClassNames('HI')">HI</el-button>
+        <el-button plain @click="handleClick('HI')" :class="getClassNames('HI')">HI</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button plain @click.prevent="handleClick('AK')" :class="getClassNames('AK')">AK</el-button>
+        <el-button plain @click="handleClick('AK')" :class="getClassNames('AK')">AK</el-button>
       </el-col>
       <el-col :span="2" :offset="4">
-        <el-button plain @click.prevent="handleClick('TX')" :class="getClassNames('TX')">TX</el-button>
+        <el-button plain @click="handleClick('TX')" :class="getClassNames('TX')">TX</el-button>
       </el-col>
       <el-col :span="2" :offset="8">
-        <el-button plain @click.prevent="handleClick('FL')" :class="getClassNames('FL')">FL</el-button>
+        <el-button plain @click="handleClick('FL')" :class="getClassNames('FL')">FL</el-button>
       </el-col>
       <el-col :span="2" :offset="2" v-if="showDc">
-        <el-button plain @click.prevent="handleClick('DC')" :class="getClassNames('DC')">DC</el-button>
+        <el-button plain @click="handleClick('DC')" :class="getClassNames('DC')">DC</el-button>
       </el-col>
     </el-row>
   </el-container>

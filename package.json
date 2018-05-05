@@ -22,7 +22,7 @@
     "unit:single": "node ./node_modules/jest/bin/jest.js --verbose --config test/unit/jest.conf.js",
     "test": "npm run -s lint && npm run -s unit",
     "lint": "eslint --ext .js,.vue src test/unit --fix && echo '\n【ツ】CODE FORMATTING PERFECTION !!!\n'",
-    "build": "npm run -s build:entry && npm run -s storybook:build && node build/build.js",
+    "build": "npm run -s build:entry && npm run -s storybook:build && node build/build.js && npm run -s lint",
     "build:entry": "node build/bin/build-entry.js",
     "storybook": "npm run -s build:entry && start-storybook -s ./.storybook/static -p 9001 -c .storybook",
     "storybook:build": "npm run -s build:entry && build-storybook -s ./.storybook/static -c .storybook -o docs",

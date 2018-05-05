@@ -4,8 +4,8 @@ import Breadcrumb from './breadcrumb'
 import ButtonGroup from './button-group'
 import Carousel from './carousel'
 import Cascader from './cascader'
-import Col from './col'
 import CheckboxGroup from './checkbox-group'
+import Col from './col'
 import RadioGroup from './radio-group'
 import Row from './row'
 
@@ -14,8 +14,8 @@ export {
   ButtonGroup,
   Carousel,
   Cascader,
-  Col,
   CheckboxGroup,
+  Col,
   RadioGroup,
   Row
 }
