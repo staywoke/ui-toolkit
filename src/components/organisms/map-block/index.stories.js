@@ -17,6 +17,60 @@ stories.addDecorator(Centered)
 stories.addDecorator(withKnobs)
 stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
+const stateColors = {
+  'AK': 'red',
+  'AL': 'red',
+  'AR': 'red',
+  'AZ': 'red',
+  'CA': 'blue',
+  'CO': 'blue',
+  'CT': 'blue',
+  'DC': 'blue',
+  'DE': 'blue',
+  'FL': 'red',
+  'GA': 'red',
+  'HI': 'blue',
+  'IA': 'red',
+  'ID': 'red',
+  'IL': 'blue',
+  'IN': 'red',
+  'KS': 'red',
+  'KY': 'red',
+  'LA': 'red',
+  'MA': 'blue',
+  'MD': 'blue',
+  'ME': 'blue',
+  'MI': 'red',
+  'MN': 'blue',
+  'MO': 'red',
+  'MS': 'red',
+  'MT': 'red',
+  'NC': 'red',
+  'ND': 'red',
+  'NE': 'red',
+  'NH': 'blue',
+  'NJ': 'blue',
+  'NM': 'blue',
+  'NV': 'blue',
+  'NY': 'blue',
+  'OH': 'red',
+  'OK': 'red',
+  'OR': 'blue',
+  'PA': 'red',
+  'RI': 'blue',
+  'SC': 'red',
+  'SD': 'red',
+  'TN': 'red',
+  'TX': 'red',
+  'UT': 'red',
+  'VA': 'blue',
+  'VT': 'blue',
+  'WA': 'blue',
+  'WI': 'red',
+  'WV': 'red',
+  'WY': 'red'
+}
+
 stories.add('Component Overview', () => {
   const sizes = select(
     'Size',
@@ -31,11 +85,9 @@ stories.add('Component Overview', () => {
     ''
   )
 
-  const classNames = object('State Options', {
-    'FL': 'blue'
-  })
+  const classNames = object('Class Names', stateColors)
 
-  const dc = boolean('Show DC', false)
+  const dc = boolean('Show DC', true)
   const labels = boolean('Show Labels', true)
 
   let attributes = ''
@@ -69,59 +121,7 @@ stories.add('› Political Map', () => {
     template: '<sw-map-block show-dc :class-names="stateColors" @click="actionLogger"></sw-map-block>',
     data () {
       return {
-        stateColors: {
-          'AK': 'red',
-          'AL': 'red',
-          'AR': 'red',
-          'AZ': 'red',
-          'CA': 'blue',
-          'CO': 'blue',
-          'CT': 'blue',
-          'DC': 'blue',
-          'DE': 'blue',
-          'FL': 'red',
-          'GA': 'red',
-          'HI': 'blue',
-          'IA': 'red',
-          'ID': 'red',
-          'IL': 'blue',
-          'IN': 'red',
-          'KS': 'red',
-          'KY': 'red',
-          'LA': 'red',
-          'MA': 'blue',
-          'MD': 'blue',
-          'ME': 'blue',
-          'MI': 'red',
-          'MN': 'blue',
-          'MO': 'red',
-          'MS': 'red',
-          'MT': 'red',
-          'NC': 'red',
-          'ND': 'red',
-          'NE': 'red',
-          'NH': 'blue',
-          'NJ': 'blue',
-          'NM': 'blue',
-          'NV': 'blue',
-          'NY': 'blue',
-          'OH': 'red',
-          'OK': 'red',
-          'OR': 'blue',
-          'PA': 'red',
-          'RI': 'blue',
-          'SC': 'red',
-          'SD': 'red',
-          'TN': 'red',
-          'TX': 'red',
-          'UT': 'red',
-          'VA': 'blue',
-          'VT': 'blue',
-          'WA': 'blue',
-          'WI': 'red',
-          'WV': 'red',
-          'WY': 'red'
-        }
+        stateColors: stateColors
       }
     },
     methods: {
