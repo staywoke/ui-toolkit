@@ -73,6 +73,9 @@ const checkDone = function () {
     return;
   }
 
+  components.imports.sort();
+  components.exports.sort();
+
   fs.writeFileSync(path.join(pathComponents, 'index.js'), render(MAIN_TEMPLATE, {
     imports: components.imports.join('\n'),
     exports: components.exports.join(',\n  ')
@@ -83,9 +86,12 @@ const processComponents = function (type) {
   const dir = path.join(pathComponents, type);
 
   parseDir(dir, type, function(results) {
+    results.imports.sort();
+    results.exports.sort();
+
     fs.writeFileSync(path.join(dir, 'index.js'), render(MAIN_TEMPLATE, {
-      imports: results['imports'].join('\n'),
-      exports: results['exports'].join(',\n  ')
+      imports: results.imports.join('\n'),
+      exports: results.exports.join(',\n  ')
     }));
 
     checkDone();

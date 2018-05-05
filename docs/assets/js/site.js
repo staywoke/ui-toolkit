@@ -32,7 +32,7 @@ function highlightCode(samples) {
     var classlist = samples[i].classList.toString();
     var markup = samples[i].textContent;
 
-    if (markup !== '' && classlist.indexOf('highlighted') === -1 && classlist.indexOf('glamorous') === -1) {
+    if (markup !== '' && classlist.indexOf('highlighted') === -1 && classlist.indexOf('glamorous') === -1 && classlist.indexOf('css-') === -1) {
       if (markup.charAt(0) === '<') {
         markup = beautifyVue(markup);
       } else {
