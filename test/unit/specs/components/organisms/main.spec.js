@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Main from '@/components/organisms/main'
 
-describe('Component › Organisms › Main', () => {
+describe('Component › Organism › Main', () => {
   it('create', () => {
     const Constructor = Vue.extend(Main)
     const vm = new Constructor().$mount()

@@ -22,6 +22,9 @@ module.exports = {
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
     'src/**/*.vue',
-    '!**/node_modules/**'
+    '!**/node_modules/**',
+    // These components are weirdly nested third party components
+    '!src/components/atoms/breadcrumb-item/*',
+    '!src/components/atoms/carousel-item/*'
   ]
 }

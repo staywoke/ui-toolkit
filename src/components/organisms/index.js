@@ -5,11 +5,13 @@ import Container from './container'
 import Footer from './footer'
 import Header from './header'
 import Main from './main'
+import MapBlock from './map-block'
 
 export {
   Aside,
   Container,
   Footer,
   Header,
-  Main
+  Main,
+  MapBlock
 }

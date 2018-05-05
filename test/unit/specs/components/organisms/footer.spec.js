@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Footer from '@/components/organisms/footer'
 
-describe('Component › Organisms › Footer', () => {
+describe('Component › Organism › Footer', () => {
   it('create', () => {
     const Constructor = Vue.extend(Footer)
     const vm = new Constructor().$mount()

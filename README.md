@@ -45,6 +45,6 @@ npm run storybook
 # run all tests
 npm test
 
-# run single unit test
+# run single unit test by name
 npm run -s unit:single -- -t 'Component › Atom › Checkbox'
 ```

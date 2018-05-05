@@ -109,11 +109,6 @@ function checkUpdate (win) {
   if (samples.length > 0 && currentComponent !== previousComponent[target]) {
     previousComponent[target] = currentComponent;
 
-    if ($code && $props) {
-      $code.style.display = 'none';
-      $props.style.display = 'none';
-    }
-
     updatePageTitle();
     externallinks();
     updatePageTitle();

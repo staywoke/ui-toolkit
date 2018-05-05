@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Header from '@/components/organisms/header'
 
-describe('Component › Organisms › Header', () => {
+describe('Component › Organism › Header', () => {
   it('create', () => {
     const Constructor = Vue.extend(Header)
     const vm = new Constructor().$mount()
