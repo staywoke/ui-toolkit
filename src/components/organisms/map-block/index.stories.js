@@ -100,7 +100,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<sw-map-block ${attributes} @click="actionLogger"></sw-map-block>`,
+    template: `<sw-map-block ${attributes} @click="actionLogger" />`,
     methods: {
       actionLogger: action('State Clicked')
     }
@@ -109,7 +109,7 @@ stories.add('Component Overview', () => {
 
 stories.add('› Default ', () => {
   return {
-    template: '<sw-map-block @click="actionLogger"></sw-map-block>',
+    template: '<sw-map-block @click="actionLogger" />',
     methods: {
       actionLogger: action('State Clicked')
     }
@@ -118,7 +118,7 @@ stories.add('› Default ', () => {
 
 stories.add('› Political Map', () => {
   return {
-    template: '<sw-map-block show-dc :class-names="stateColors" @click="actionLogger"></sw-map-block>',
+    template: '<sw-map-block show-dc :class-names="stateColors" @click="actionLogger" />',
     data () {
       return {
         stateColors: stateColors
@@ -132,7 +132,7 @@ stories.add('› Political Map', () => {
 
 stories.add('› Disabled Midwest ', () => {
   return {
-    template: '<sw-map-block :class-names="midwest" @click="actionLogger"></sw-map-block>',
+    template: '<sw-map-block :class-names="midwest" @click="actionLogger" />',
     data () {
       return {
         midwest: {
@@ -159,42 +159,42 @@ stories.add('› Disabled Midwest ', () => {
 
 stories.add('› Show DC', () => {
   return {
-    template: '<sw-map-block show-dc></sw-map-block>'
+    template: '<sw-map-block show-dc />'
   }
 })
 
 stories.add('› No Labels', () => {
   return {
-    template: '<sw-map-block hide-labels></sw-map-block>'
+    template: '<sw-map-block hide-labels />'
   }
 })
 
 stories.add('› Size Responsive', () => {
   return {
-    template: '<sw-map-block></sw-map-block>'
+    template: '<sw-map-block />'
   }
 })
 
 stories.add('› Size large', () => {
   return {
-    template: '<sw-map-block size="large"></sw-map-block>'
+    template: '<sw-map-block size="large" />'
   }
 })
 
 stories.add('› Size Medium', () => {
   return {
-    template: '<sw-map-block size="medium"></sw-map-block>'
+    template: '<sw-map-block size="medium" />'
   }
 })
 
 stories.add('› Size Small', () => {
   return {
-    template: '<sw-map-block size="small"></sw-map-block>'
+    template: '<sw-map-block size="small" />'
   }
 })
 
 stories.add('› Size Mini', () => {
   return {
-    template: '<sw-map-block size="mini"></sw-map-block>'
+    template: '<sw-map-block size="mini" />'
   }
 })

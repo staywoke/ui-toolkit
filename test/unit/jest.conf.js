@@ -25,6 +25,7 @@ module.exports = {
     '!**/node_modules/**',
     // These components are weirdly nested third party components
     '!src/components/atoms/breadcrumb-item/*',
-    '!src/components/atoms/carousel-item/*'
+    '!src/components/atoms/carousel-item/*',
+    '!src/components/atoms/collapse-item/*'
   ]
 }

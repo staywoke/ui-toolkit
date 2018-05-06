@@ -1,12 +1,16 @@
 Atom › Switch
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-switch ${attributes} v-model="value" @change="handleClose"></el-switch>
+<el-switch
+  v-model="value"
+  @change="handleChange"
+/>
 ```
 
 
@@ -25,7 +29,7 @@ export default {
     }
   },
   methods: {
-    handleClose () {}
+    handleChange () {}
   }
 }
 ```

@@ -1,4 +1,4 @@
-Atom › Radio
+Molecule › Radio Group
 ---
 
 > The following is a quick example of how to use this component.

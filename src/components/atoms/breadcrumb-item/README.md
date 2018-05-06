@@ -1,12 +1,15 @@
 Atom › Breadcrumb Item
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-breadcrumb-item to="/">Home</el-breadcrumb-item>
+<el-breadcrumb-item to="/">
+  Home
+</el-breadcrumb-item>
 ```
 
 

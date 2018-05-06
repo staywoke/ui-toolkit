@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <img src="../assets/logo.jpg">
+    <sw-logo />
 
     <h1>UI Toolkit</h1>
     <h2>Vue.js Components</h2>
@@ -19,8 +19,13 @@
 </template>
 
 <script>
+import Logo from './atoms/logo'
+
 export default {
   name: 'Welcome',
+  components: {
+    Logo
+  },
   props: {
     message: {
       type: String,
@@ -70,6 +75,7 @@ ul {
   padding: 0;
   max-width: 260px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 li::before {
   content: '• ';

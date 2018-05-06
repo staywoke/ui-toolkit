@@ -1,12 +1,15 @@
 Atom › Tag
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-tag :key="tag.name" v-for="tag in tags" :type="tag.type" closable @close="handleClose(tag.name)">{{ tag.name }}</el-tag>
+<el-tag :key="tag.name" v-for="tag in tags" :type="tag.type" closable @close="handleClose(tag.name)">
+  {{ tag.name }}
+</el-tag>
 ```
 
 

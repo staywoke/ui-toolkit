@@ -51,7 +51,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<el-alert ${attributes} @close="actionLogger"></el-alert>`,
+    template: `<el-alert ${attributes} @close="actionLogger" />`,
     methods: {
       actionLogger: action('Alert Closed')
     }
@@ -60,42 +60,42 @@ stories.add('Component Overview', () => {
 
 stories.add('› Default', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success"></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" />'
   }
 })
 
 stories.add('› Custom Close', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success" close-text="Done"></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" close-text="Done" />'
   }
 })
 
 stories.add('› Disable Close', () => {
   return {
-    template: '<el-alert title="Oops, Something Went Wrong." type="error" :closable="false"></el-alert>'
+    template: '<el-alert title="Oops, Something Went Wrong." type="error" :closable="false" />'
   }
 })
 
 stories.add('› Centered Text', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success" center></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" center />'
   }
 })
 
 stories.add('› Show Icon', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success" show-icon></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" show-icon />'
   }
 })
 
 stories.add('› Description', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success" description="Check Your Email for a Confirmation Message."></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" description="Check Your Email for a Confirmation Message." />'
   }
 })
 
 stories.add('› Icon & Description', () => {
   return {
-    template: '<el-alert title="Message Sent" type="success" description="Check Your Email for a Confirmation Message." show-icon></el-alert>'
+    template: '<el-alert title="Message Sent" type="success" description="Check Your Email for a Confirmation Message." show-icon />'
   }
 })

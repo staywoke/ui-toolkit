@@ -1,12 +1,19 @@
 Atom › Input Number
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-input-number v-model="input"></el-input>
+<el-input-number ${attributes}
+  placeholder="Placeholder"
+  v-model="input"
+  @blur="blurHandler"
+  @focus="focusHandler"
+  @change="changeHandler"
+/>
 ```
 
 
@@ -23,6 +30,11 @@ export default {
     return {
       input: 0
     }
+  },
+  methods: {
+    blurHandler() {},
+    focusHandler() {},
+    changeHandler() {}
   }
 }
 ```

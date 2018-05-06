@@ -7,7 +7,12 @@ Atom › Color Picker
 #### Template:
 
 ```xml
-<el-color-picker v-model="color" :predefine="predefineColors" @change="changeHandler" @active-change="actionChangeHandler"></el-color-picker>
+<el-color-picker
+  v-model="color"
+  :predefine="predefineColors"
+  @change="changeHandler"
+  @active-change="actionChangeHandler"
+/>
 ```
 
 

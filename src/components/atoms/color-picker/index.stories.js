@@ -54,7 +54,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<el-color-picker ${attributes} v-model="color" :predefine="predefineColors" @change="actionLogger" @active-change="actionActiveLogger"></el-color-picker>`,
+    template: `<el-color-picker ${attributes} v-model="color" :predefine="predefineColors" @change="actionLogger" @active-change="actionActiveLogger" />`,
     data () {
       return {
         color: '#409EFF',
@@ -76,7 +76,7 @@ stories.add('Component Overview', () => {
 
 stories.add('› Default', () => {
   return {
-    template: '<el-color-picker v-model="color"></el-color-picker>',
+    template: '<el-color-picker v-model="color" />',
     data () {
       return {
         color: null
@@ -87,7 +87,7 @@ stories.add('› Default', () => {
 
 stories.add('› Set Color', () => {
   return {
-    template: '<el-color-picker v-model="color"></el-color-picker>',
+    template: '<el-color-picker v-model="color" />',
     data () {
       return {
         color: '#409EFF'
@@ -98,7 +98,7 @@ stories.add('› Set Color', () => {
 
 stories.add('› Size Medium', () => {
   return {
-    template: '<el-color-picker v-model="color" side="medium"></el-color-picker>',
+    template: '<el-color-picker v-model="color" side="medium" />',
     data () {
       return {
         color: '#409EFF'
@@ -109,7 +109,7 @@ stories.add('› Size Medium', () => {
 
 stories.add('› Size Small', () => {
   return {
-    template: '<el-color-picker v-model="color" side="small"></el-color-picker>',
+    template: '<el-color-picker v-model="color" side="small" />',
     data () {
       return {
         color: '#409EFF'
@@ -120,7 +120,7 @@ stories.add('› Size Small', () => {
 
 stories.add('› Size Mini', () => {
   return {
-    template: '<el-color-picker v-model="color" side="mini"></el-color-picker>',
+    template: '<el-color-picker v-model="color" side="mini" />',
     data () {
       return {
         color: '#409EFF'
@@ -131,7 +131,7 @@ stories.add('› Size Mini', () => {
 
 stories.add('› Alpha Enabled', () => {
   return {
-    template: '<el-color-picker v-model="color" show-alpha></el-color-picker>',
+    template: '<el-color-picker v-model="color" show-alpha />',
     data () {
       return {
         color: '#409EFF'
@@ -142,7 +142,7 @@ stories.add('› Alpha Enabled', () => {
 
 stories.add('› Predefined Colors', () => {
   return {
-    template: '<el-color-picker v-model="color" :predefine="predefineColors"></el-color-picker>',
+    template: '<el-color-picker v-model="color" :predefine="predefineColors" />',
     data () {
       return {
         color: '#409EFF',
@@ -160,7 +160,7 @@ stories.add('› Predefined Colors', () => {
 
 stories.add('› Disabled', () => {
   return {
-    template: '<el-color-picker v-model="color" disabled></el-color-picker>',
+    template: '<el-color-picker v-model="color" disabled />',
     data () {
       return {
         color: '#409EFF'
@@ -171,7 +171,7 @@ stories.add('› Disabled', () => {
 
 stories.add('› Format HEX', () => {
   return {
-    template: '<el-color-picker v-model="color" color-format="hex"></el-color-picker>',
+    template: '<el-color-picker v-model="color" color-format="hex" />',
     data () {
       return {
         color: '#409EFF'
@@ -182,7 +182,7 @@ stories.add('› Format HEX', () => {
 
 stories.add('› Format RGB', () => {
   return {
-    template: '<el-color-picker v-model="color" color-format="rgb"></el-color-picker>',
+    template: '<el-color-picker v-model="color" color-format="rgb" />',
     data () {
       return {
         color: 'rgb(64, 158, 255)'
@@ -193,7 +193,7 @@ stories.add('› Format RGB', () => {
 
 stories.add('› Format HSL', () => {
   return {
-    template: '<el-color-picker v-model="color" color-format="hsl"></el-color-picker>',
+    template: '<el-color-picker v-model="color" color-format="hsl" />',
     data () {
       return {
         color: 'hsl(210.47120418848166, 100%, 63%)'
@@ -204,7 +204,7 @@ stories.add('› Format HSL', () => {
 
 stories.add('› Format HSV', () => {
   return {
-    template: '<el-color-picker v-model="color" color-format="hsv"></el-color-picker>',
+    template: '<el-color-picker v-model="color" color-format="hsv" />',
     data () {
       return {
         color: 'hsv(210.47120418848166, 75%, 100%)'

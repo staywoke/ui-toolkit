@@ -164,7 +164,7 @@ stories.add('Component Overview', () => {
 
 stories.add('› Default', () => {
   return {
-    template: '<el-input placeholder="Please input" v-model="input"></el-input>',
+    template: '<el-input placeholder="Please input" v-model="input" />',
     data () {
       return {
         input: null
@@ -175,7 +175,7 @@ stories.add('› Default', () => {
 
 stories.add('› Search', () => {
   return {
-    template: '<el-input placeholder="Search ..." v-model="input" type="search" prefix-icon="el-icon-search"></el-input>',
+    template: '<el-input placeholder="Search ..." v-model="input" type="search" prefix-icon="el-icon-search" />',
     data () {
       return {
         input: null
@@ -186,7 +186,7 @@ stories.add('› Search', () => {
 
 stories.add('› Password', () => {
   return {
-    template: '<el-input placeholder="Password" v-model="password" type="password"></el-input>',
+    template: '<el-input placeholder="Password" v-model="password" type="password" />',
     data () {
       return {
         password: null
@@ -197,7 +197,7 @@ stories.add('› Password', () => {
 
 stories.add('› Textarea', () => {
   return {
-    template: '<el-input placeholder="Message" v-model="input" type="textarea"></el-input>',
+    template: '<el-input placeholder="Message" v-model="input" type="textarea" />',
     data () {
       return {
         input: null
@@ -208,7 +208,7 @@ stories.add('› Textarea', () => {
 
 stories.add('› Textarea Autosize', () => {
   return {
-    template: '<el-input placeholder="Message" v-model="input" type="textarea" :autosize="{ minRows: 2, maxRows: 4 }"></el-input>',
+    template: '<el-input placeholder="Message" v-model="input" type="textarea" :autosize="{ minRows: 2, maxRows: 4 }" />',
     data () {
       return {
         input: null
@@ -219,7 +219,7 @@ stories.add('› Textarea Autosize', () => {
 
 stories.add('› Clearable', () => {
   return {
-    template: '<el-input placeholder="Search ..." v-model="input" prefix-icon="el-icon-search" clearable></el-input>',
+    template: '<el-input placeholder="Search ..." v-model="input" prefix-icon="el-icon-search" clearable />',
     data () {
       return {
         input: null
@@ -230,6 +230,6 @@ stories.add('› Clearable', () => {
 
 stories.add('› Disabled', () => {
   return {
-    template: '<el-input placeholder="Search ..." disabled></el-input>'
+    template: '<el-input placeholder="Search ..." disabled />'
   }
 })

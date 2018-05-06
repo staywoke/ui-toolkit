@@ -1,4 +1,4 @@
-Molecule › Row
+Molecule › Col
 ---
 
 > The following is a quick example of how to use this component.

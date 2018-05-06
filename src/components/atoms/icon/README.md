@@ -1,4 +1,4 @@
-Atom › Button
+Atom › Icon
 ---
 
 > The following is a quick example of how to use this component.
@@ -7,7 +7,7 @@ Atom › Button
 #### Template:
 
 ```xml
-<el-icon name="search"></el-icon>
+<el-icon name="search" />
 ```
 
 

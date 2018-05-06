@@ -1,12 +1,15 @@
 Atom › Badge
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-badge value="12" class="badge-item">Some Text</el-badge>
+<el-badge value="12" class="badge-item">
+  Some Text
+</el-badge>
 ```
 
 

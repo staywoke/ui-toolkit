@@ -1,13 +1,15 @@
 Atom › Radio Button
 ---
 
-The following is a quick example of how to use this component.
+> The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-radio v-model="radio" label="my-value" @change="handleChange">Option A</el-radio>
+<el-radio v-model="radio" label="my-value" @change="handleChange">
+  Option A
+</el-radio>
 ```
 
 

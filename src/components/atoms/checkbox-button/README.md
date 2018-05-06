@@ -1,13 +1,21 @@
 Atom › Checkbox Button
 ---
 
-The following is a quick example of how to use this component.
+> The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-checkbox-button name="my-checkbox" label="My Checkbox" true-label="Yes" false-label="No" border v-model="checked" @change="handleChange"></el-checkbox-button>
+<el-checkbox-button
+  name="my-checkbox"
+  label="My Checkbox"
+  true-label="Yes"
+  false-label="No"
+  border
+  v-model="checked"
+  @change="handleChange"
+/>
 ```
 
 

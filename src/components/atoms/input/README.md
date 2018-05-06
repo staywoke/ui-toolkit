@@ -1,12 +1,18 @@
 Atom › Input
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-input placeholder="Search ..." v-model="input" type="search" prefix-icon="el-icon-search"></el-input>
+<el-input
+  placeholder="Search ..."
+  v-model="input"
+  type="search"
+  prefix-icon="el-icon-search"
+/>
 ```
 
 

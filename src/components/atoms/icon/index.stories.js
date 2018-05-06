@@ -95,6 +95,6 @@ stories.add('Component Overview', () => {
   )
 
   return {
-    template: `<el-icon name="${name}" class="icon-demo"></el-icon>`
+    template: `<el-icon name="${name}" class="icon-demo" />`
   }
 })

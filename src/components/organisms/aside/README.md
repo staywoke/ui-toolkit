@@ -1,12 +1,15 @@
 Organism › Aside
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-aside>Aside</el-aside>
+<el-aside>
+  Aside
+</el-aside>
 ```
 
 

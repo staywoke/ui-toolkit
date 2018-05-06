@@ -285,7 +285,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<el-cascader ${attributes} :options="options" v-model="selectedOptions" @change="actionLogger"></el-cascader>`,
+    template: `<el-cascader ${attributes} :options="options" v-model="selectedOptions" @change="actionLogger" />`,
     data () {
       return {
         options: options,
@@ -300,7 +300,7 @@ stories.add('Component Overview', () => {
 
 stories.add('› Expand on Click', () => {
   return {
-    template: `<el-cascader :options="options" v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" v-model="selectedOptions" />`,
     data () {
       return {
         options: options,
@@ -312,7 +312,7 @@ stories.add('› Expand on Click', () => {
 
 stories.add('› Expand on Hover', () => {
   return {
-    template: `<el-cascader :options="options" expand-trigger="hover" v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" expand-trigger="hover" v-model="selectedOptions" />`,
     data () {
       return {
         options: options,
@@ -324,7 +324,7 @@ stories.add('› Expand on Hover', () => {
 
 stories.add('› Size Medium', () => {
   return {
-    template: `<el-cascader :options="options" size="medium" v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" size="medium" v-model="selectedOptions" />`,
     data () {
       return {
         options: options,
@@ -336,7 +336,7 @@ stories.add('› Size Medium', () => {
 
 stories.add('› Size Small', () => {
   return {
-    template: `<el-cascader :options="options" size="small" v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" size="small" v-model="selectedOptions" />`,
     data () {
       return {
         options: options,
@@ -348,7 +348,7 @@ stories.add('› Size Small', () => {
 
 stories.add('› Size Mini', () => {
   return {
-    template: `<el-cascader :options="options" size="mini" v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" size="mini" v-model="selectedOptions" />`,
     data () {
       return {
         options: options,
@@ -360,7 +360,7 @@ stories.add('› Size Mini', () => {
 
 stories.add('› Disabled', () => {
   return {
-    template: `<el-cascader :options="options" disabled v-model="selectedOptions"></el-cascader>`,
+    template: `<el-cascader :options="options" disabled v-model="selectedOptions" />`,
     data () {
       return {
         options: options,

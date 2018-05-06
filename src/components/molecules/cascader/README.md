@@ -7,7 +7,10 @@ Molecule › Cascader
 #### Template:
 
 ```xml
-<el-cascader :options="options" v-model="selectedOptions"></el-cascader>
+<el-cascader
+  :options="options"
+  v-model="selectedOptions"
+/>
 ```
 
 

@@ -35,7 +35,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<el-checkbox-button ${attributes} v-model="checked" @change="actionLogger"></el-checkbox-button>`,
+    template: `<el-checkbox-button ${attributes} v-model="checked" @change="actionLogger" />`,
     data () {
       return {
         checked: false

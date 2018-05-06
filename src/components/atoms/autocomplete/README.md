@@ -1,5 +1,6 @@
 Atom › Autocomplete
 ---
+
 > The following is a quick example of how to use this component.
 
 
@@ -13,8 +14,8 @@ Atom › Autocomplete
   @select="handleSelect"
   @blur="blurHandler"
   @focus="focusHandler"
-  @change="changeHandler">
-</el-autocomplete>
+  @change="changeHandler"
+/>
 ```
 
 

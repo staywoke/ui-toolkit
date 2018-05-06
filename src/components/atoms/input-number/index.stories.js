@@ -64,8 +64,8 @@ stories.add('Component Overview', () => {
       v-model="input"
       @blur="blurHandler"
       @focus="focusHandler"
-      @change="changeHandler">
-    </el-input>`,
+      @change="changeHandler"
+    />`,
     data () {
       return {
         input: 0

@@ -1,12 +1,15 @@
 Organism › Header
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-header>Header</el-header>
+<el-header height="80px" style="line-height: 80px;">
+  Header
+</el-header>
 ```
 
 

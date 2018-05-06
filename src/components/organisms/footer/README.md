@@ -1,12 +1,15 @@
 Organism › Footer
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-alert type="success" title="Message Text" showIcon @close="handleClose"></el-alert>
+<el-footer height="80px" style="line-height: 80px">
+  Footer
+</el-footer>
 ```
 
 

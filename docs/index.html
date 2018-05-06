@@ -285,6 +285,23 @@ body {
 .collapse-all:hover {
   color: #333;
 }
+
+.Pane.vertical.Pane1 h4 {
+  cursor: pointer;
+  position: relative;
+}
+
+.Pane.vertical.Pane1 h4::before {
+  content: '\25BF';
+  position: absolute;
+  left: 0;
+  color: #595959;
+  transition: transform 0.1s ease-in-out;
+}
+
+.Pane.vertical.Pane1 h4.collapsed::before {
+  transform: rotate(-90deg);
+}
 </style>
 
 <script>
@@ -294,6 +311,29 @@ window.onload = function () {
   hljs.configure({ languages: ['xml', 'js', 'css'] });
   managerTimer = setInterval(function() { checkUpdate('manager'); }, 100);
 
+  setTimeout(function () {
+    addCollapseLink();
+    addToggleLinks();
+  }, 500);
+};
+
+function addToggleLinks () {
+  var $groups = document.querySelectorAll('.Pane.vertical.Pane1 h4');
+  for (var i = 0; i < $groups.length; i++) {
+    $groups[i].addEventListener('click', function (evt) {
+      $list = evt.target.nextSibling;
+      if ($list.style.display !== 'none') {
+        $list.style.display = 'none';
+      } else {
+        $list.style.display = 'block';
+      }
+
+      evt.target.classList.toggle('collapsed');
+    });
+  }
+}
+
+function addCollapseLink () {
   var $filter = document.querySelector('input[name="filter-text"]');
 
   var a = document.createElement('a');
@@ -309,15 +349,20 @@ window.onload = function () {
   }
 
   $filter.parentNode.insertBefore(a, $filter.nextSibling);
-};
+}
 
 function collapseAll () {
-  var menuItems = document.querySelectorAll('div[role="menuitem"]');
-
-  for (var i = 0; i < menuItems.length; i++){
-    if (menuItems[i].nextSibling.innerHTML !== '') {
-      menuItems[i].click();
+  var $menuItems = document.querySelectorAll('div[role="menuitem"]');
+  for (var i = 0; i < $menuItems.length; i++){
+    if ($menuItems[i].nextSibling.innerHTML !== '') {
+      $menuItems[i].click();
     }
+  }
+
+  var $groups = document.querySelectorAll('.Pane.vertical.Pane1 h4');
+  for (var i = 0; i < $groups.length; i++) {
+    $groups[i].nextSibling.style.display = 'none';
+    $groups[i].classList.toggle('collapsed');
   }
 }
 </script>
@@ -326,5 +371,5 @@ function collapseAll () {
 </head>
 <body style="margin: 0;">
     <div id="root"></div>
-<script type="text/javascript" src="static/manager.701dc28e7586bd6f76d4.bundle.js"></script></body>
+<script type="text/javascript" src="static/manager.59db95db476a609bc1c6.bundle.js"></script></body>
 </html>

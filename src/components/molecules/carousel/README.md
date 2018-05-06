@@ -1,4 +1,4 @@
-Atom › Carousel
+Molecule › Carousel
 ---
 
 > The following is a quick example of how to use this component.

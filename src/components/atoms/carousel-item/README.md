@@ -1,12 +1,15 @@
 Atom › Carousel Item
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-carousel-item>Content</el-carousel-item>
+<el-carousel-item>
+  Content
+</el-carousel-item>
 ```
 
 

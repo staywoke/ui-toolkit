@@ -1,12 +1,16 @@
 Organism › Map Block
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<sw-map-block :class-names="classNames" @click="handleClick"></sw-map-block>
+<sw-map-block
+  :class-names="classNames"
+  @click="handleClick"
+/>
 ```
 
 

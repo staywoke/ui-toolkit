@@ -19,7 +19,7 @@
     "start": "npm run -s build:entry && npm run dev",
     "unit": "jest --verbose --config test/unit/jest.conf.js --coverage",
     "unit:coverage": "http-server ./test/unit/coverage/lcov-report -o -s -p8083 -c-1 --cors",
-    "unit:single": "node ./node_modules/jest/bin/jest.js --verbose --config test/unit/jest.conf.js",
+    "unit:single": "jest --verbose --runInBand --config test/unit/jest.conf.js",
     "test": "npm run -s lint && npm run -s unit",
     "lint": "eslint --ext .js,.vue src test/unit --fix && echo '\n【ツ】CODE FORMATTING PERFECTION !!!\n'",
     "build": "npm run -s build:entry && npm run -s storybook:build && node build/build.js && npm run -s lint",

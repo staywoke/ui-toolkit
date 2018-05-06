@@ -7,7 +7,9 @@ Atom › Radio
 #### Template:
 
 ```xml
-<el-radio v-model="radio" label="my-value" @change="handleChange">Option A</el-radio>
+<el-radio v-model="radio" label="my-value" @change="handleChange">
+  Option A
+</el-radio>
 ```
 
 
@@ -26,9 +28,7 @@ export default {
     }
   },
   methods: {
-    handleChange () {
-      // do something with `this.radio`
-    }
+    handleChange () {}
   }
 }
 ```

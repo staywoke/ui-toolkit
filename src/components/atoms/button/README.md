@@ -7,7 +7,9 @@ Atom › Button
 #### Template:
 
 ```xml
-<el-button type="success" plain round>Button</el-button>
+<el-button type="success" plain round>
+  Button
+</el-button>
 ```
 
 

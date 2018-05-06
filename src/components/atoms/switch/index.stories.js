@@ -44,7 +44,7 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<el-switch ${attributes} v-model="value" @change="actionLogger"></el-switch>`,
+    template: `<el-switch ${attributes} v-model="value" @change="actionLogger" />`,
     data () {
       return {
         value: true
@@ -58,7 +58,7 @@ stories.add('Component Overview', () => {
 
 stories.add('› Default', () => {
   return {
-    template: '<el-switch v-model="value"></el-switch>',
+    template: '<el-switch v-model="value" />',
     data () {
       return {
         value: true
@@ -69,7 +69,7 @@ stories.add('› Default', () => {
 
 stories.add('› Text Labels', () => {
   return {
-    template: '<el-switch v-model="value" active-text="On" inactive-text="Off"></el-switch>',
+    template: '<el-switch v-model="value" active-text="On" inactive-text="Off" />',
     data () {
       return {
         value: true
@@ -80,7 +80,7 @@ stories.add('› Text Labels', () => {
 
 stories.add('› Custom Colors', () => {
   return {
-    template: '<el-switch v-model="value" active-color="#67C23A" inactive-color="#F56C6C"></el-switch>',
+    template: '<el-switch v-model="value" active-color="#67C23A" inactive-color="#F56C6C" />',
     data () {
       return {
         value: true
@@ -91,7 +91,7 @@ stories.add('› Custom Colors', () => {
 
 stories.add('› Custom Width', () => {
   return {
-    template: '<el-switch v-model="value" :width=80></el-switch>',
+    template: '<el-switch v-model="value" :width=80 />',
     data () {
       return {
         value: true
@@ -102,7 +102,7 @@ stories.add('› Custom Width', () => {
 
 stories.add('› Disabled', () => {
   return {
-    template: '<el-switch v-model="value" disabled></el-switch>',
+    template: '<el-switch v-model="value" disabled />',
     data () {
       return {
         value: true

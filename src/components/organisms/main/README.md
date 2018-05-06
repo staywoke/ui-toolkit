@@ -1,12 +1,15 @@
 Organism › Main
 ---
+
 > The following is a quick example of how to use this component.
 
 
 #### Template:
 
 ```xml
-<el-main>Main</el-main>
+<el-main>
+  Main
+</el-main>
 ```
 
 

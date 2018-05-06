@@ -7,7 +7,14 @@ Atom › Checkbox
 #### Template:
 
 ```xml
-<el-checkbox name="my-checkbox" label="My Checkbox" true-label="Yes" false-label="No" v-model="checked" @change="handleChange"></el-checkbox>
+<el-checkbox
+  name="my-checkbox"
+  label="My Checkbox"
+  true-label="Yes"
+  false-label="No"
+  v-model="checked"
+  @change="handleChange"
+/>
 ```
 
 

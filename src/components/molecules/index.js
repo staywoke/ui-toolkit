@@ -6,6 +6,7 @@ import Carousel from './carousel'
 import Cascader from './cascader'
 import CheckboxGroup from './checkbox-group'
 import Col from './col'
+import Collapse from './collapse'
 import RadioGroup from './radio-group'
 import Row from './row'
 
@@ -16,6 +17,7 @@ export {
   Cascader,
   CheckboxGroup,
   Col,
+  Collapse,
   RadioGroup,
   Row
 }

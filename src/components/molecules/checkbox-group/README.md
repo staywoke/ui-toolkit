@@ -1,4 +1,4 @@
-Atom › Checkbox Group
+Molecule › Checkbox Group
 ---
 
 > The following is a quick example of how to use this component.
