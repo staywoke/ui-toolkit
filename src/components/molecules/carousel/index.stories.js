@@ -6,8 +6,9 @@ import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs, text, boolean, select, number } from '@storybook/addon-knobs/vue'
 
-/* eslint-disable-next-line no-unused-vars */
+/* eslint-disable no-unused-vars */
 import Component from '.'
+import CarouselItem from '../../atoms/carousel-item'
 import README from './README.md'
 
 const stories = storiesOf('Molecules | Carousel', module)
@@ -73,8 +74,8 @@ stories.add('Component Overview', () => {
     .concat((arrow !== '' && arrow !== 'hover') ? `arrow="${arrow}" ` : '')
     .concat((position !== '') ? `indicator-position="${position}" ` : '')
     .concat((!autoplay) ? `:autoplay="false" ` : '')
-    .concat((initialIndex > 0) ? `initial-index="${initialIndex}" ` : '')
-    .concat((interval > 0) ? `interval="${interval}" ` : '')
+    .concat((initialIndex > 0) ? `:initial-index="${initialIndex}" ` : '')
+    .concat((interval > 0) ? `:interval="${interval}" ` : '')
 
   attributes = attributes.trim()
 
