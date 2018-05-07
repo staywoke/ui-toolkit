@@ -1,5 +1,3 @@
-![logo](./src/assets/logo.jpg "logo")
-
 # UI Toolkit
 
 > Vue.js UI Toolkit for Rapid Project Development of StayWoke Projects.

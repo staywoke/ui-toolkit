@@ -23,9 +23,12 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.vue',
     '!**/node_modules/**',
-    // These components are weirdly nested third party components
+    // These components are nested third party components that can't be tested directly
     '!src/components/atoms/breadcrumb-item/*',
     '!src/components/atoms/carousel-item/*',
-    '!src/components/atoms/collapse-item/*'
+    '!src/components/atoms/collapse-item/*',
+    '!src/components/atoms/dropdown-item/*',
+    '!src/components/molecules/dropdown/*',
+    '!src/components/molecules/dropdown-menu/*'
   ]
 }

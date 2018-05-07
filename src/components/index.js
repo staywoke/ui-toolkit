@@ -20,6 +20,9 @@ import CollapseItem from './atoms/collapse-item'
 import ColorPicker from './atoms/color-picker'
 import Container from './organisms/container'
 import DatePicker from './atoms/date-picker'
+import Dropdown from './molecules/dropdown'
+import DropdownItem from './atoms/dropdown-item'
+import DropdownMenu from './molecules/dropdown-menu'
 import Footer from './organisms/footer'
 import Header from './organisms/header'
 import Icon from './atoms/icon'
@@ -56,6 +59,9 @@ export {
   ColorPicker,
   Container,
   DatePicker,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
   Footer,
   Header,
   Icon,

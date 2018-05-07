@@ -11,6 +11,7 @@ import CheckboxButton from './checkbox-button'
 import CollapseItem from './collapse-item'
 import ColorPicker from './color-picker'
 import DatePicker from './date-picker'
+import DropdownItem from './dropdown-item'
 import Icon from './icon'
 import Input from './input'
 import InputNumber from './input-number'
@@ -32,6 +33,7 @@ export {
   CollapseItem,
   ColorPicker,
   DatePicker,
+  DropdownItem,
   Icon,
   Input,
   InputNumber,
