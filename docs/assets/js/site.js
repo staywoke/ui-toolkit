@@ -55,8 +55,10 @@ function highlightCode(samples) {
         document.querySelector('.vue-info .props').classList.remove('open');
         document.querySelector('#toggle-code').classList.remove('active');
         document.querySelector('#toggle-props').classList.remove('active');
+        document.querySelector('#reload-preview').classList.remove('active');
         document.querySelector('#toggle-code').style.display = 'block';
         document.querySelector('#toggle-props').style.display = 'block';
+        document.querySelector('#reload-preview').style.display = 'block';
       }
     }
   }
@@ -98,6 +100,7 @@ function checkUpdate (win) {
   var sample;
   var $code = document.querySelector('#toggle-code');
   var $props = document.querySelector('#toggle-props');
+  var $reload = document.querySelector('#reload-preview');
 
   if (target === 'manager') {
     samples = document.querySelectorAll('.Pane.horizontal.Pane2 pre');
@@ -116,9 +119,10 @@ function checkUpdate (win) {
 
     setInterval(function() { highlightCode(samples); }, 100);
   } else if (samples.length === 0 && currentComponent !== previousComponent[target]) {
-    if ($code && $props) {
+    if ($code && $props && $reload) {
       $code.style.display = 'none';
       $props.style.display = 'none';
+      $reload.style.display = 'none';
     }
   }
 }
