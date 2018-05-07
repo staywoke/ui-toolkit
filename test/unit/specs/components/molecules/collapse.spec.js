@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Collapse from '@/components/molecules/collapse'
 
-describe('Component › Molecules › Collapse', () => {
+describe('Component › Molecule › Collapse', () => {
   it('create', () => {
     const Constructor = Vue.extend(Collapse)
     const vm = new Constructor().$mount()

@@ -17,10 +17,12 @@ import Input from './input'
 import InputNumber from './input-number'
 import Logo from './logo'
 import MenuItem from './menu-item'
+import Popover from './popover'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Switch from './switch'
 import Tag from './tag'
+import Tooltip from './tooltip'
 
 export {
   Alert,
@@ -40,8 +42,10 @@ export {
   InputNumber,
   Logo,
   MenuItem,
+  Popover,
   Radio,
   RadioButton,
   Switch,
-  Tag
+  Tag,
+  Tooltip
 }

@@ -98,3 +98,90 @@ stories.add('Component Overview', () => {
     template: `<el-icon name="${name}" class="icon-demo" />`
   }
 })
+
+stories.add('› All Icons', () => {
+  return {
+    template: `<el-container class="icon-demo-container">
+      <el-container class="icon-demo-wrapper" v-for="icon in icons" :key="icon">
+        <el-icon :name="icon" />
+        <small>{{icon}}</span>
+      </el-container>
+    </el-container>`,
+    data () {
+      return {
+        icons: [
+          'arrow-down',
+          'arrow-left',
+          'arrow-right',
+          'arrow-up',
+          'back',
+          'bell',
+          'caret-bottom',
+          'caret-left',
+          'caret-right',
+          'caret-top',
+          'check',
+          'circle-check-outline',
+          'circle-check',
+          'circle-close-outline',
+          'circle-close',
+          'circle-plus-outline',
+          'circle-plus',
+          'close',
+          'd-arrow-left',
+          'd-arrow-right',
+          'd-caret',
+          'date',
+          'delete',
+          'document',
+          'download',
+          'edit-outline',
+          'edit',
+          'error',
+          'goods',
+          'info',
+          'loading',
+          'location-outline',
+          'location',
+          'menu',
+          'message',
+          'minus',
+          'mobile-phone',
+          'more-outline',
+          'more',
+          'news',
+          'phone-outline',
+          'phone',
+          'picture-outline',
+          'picture',
+          'plus',
+          'printer',
+          'question',
+          'rank',
+          'refresh',
+          'remove-outline',
+          'remove',
+          'search',
+          'service',
+          'setting',
+          'share',
+          'sold-out',
+          'sort-down',
+          'sort-up',
+          'sort',
+          'star-off',
+          'star-on',
+          'success',
+          'tickets',
+          'time',
+          'upload',
+          'upload2',
+          'view',
+          'warning',
+          'zoom-in',
+          'zoom-out'
+        ]
+      }
+    }
+  }
+})

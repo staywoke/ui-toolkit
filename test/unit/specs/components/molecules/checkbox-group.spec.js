@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import CheckboxGroup from '@/components/molecules/checkbox-group'
 
-describe('Component › Molecules › Checkbox Group', () => {
+describe('Component › Molecule › Checkbox Group', () => {
   it('create', () => {
     const Constructor = Vue.extend(CheckboxGroup)
     const vm = new Constructor().$mount()

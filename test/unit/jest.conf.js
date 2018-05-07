@@ -23,12 +23,14 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.vue',
     '!**/node_modules/**',
-    // These components are nested third party components that can't be tested directly
+    // These components are third party components that can't easily be tested locally ( but have their own external tests )
     '!src/components/atoms/breadcrumb-item/*',
     '!src/components/atoms/carousel-item/*',
     '!src/components/atoms/collapse-item/*',
     '!src/components/atoms/dropdown-item/*',
     '!src/components/atoms/menu-item/*',
+    '!src/components/atoms/popover/*',
+    '!src/components/atoms/tooltip/*',
     '!src/components/molecules/dropdown/*',
     '!src/components/molecules/dropdown-menu/*',
     '!src/components/molecules/menu-item-group/*',

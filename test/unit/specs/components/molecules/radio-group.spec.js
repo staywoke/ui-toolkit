@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import RadioGroup from '@/components/molecules/radio-group'
 
-describe('Component › Molecules › Radio Group', () => {
+describe('Component › Molecule › Radio Group', () => {
   it('create', () => {
     const Constructor = Vue.extend(RadioGroup)
     const vm = new Constructor().$mount()

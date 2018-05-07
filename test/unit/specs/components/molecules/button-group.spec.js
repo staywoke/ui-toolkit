@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import ButtonGroup from '@/components/molecules/button-group'
 
-describe('Component › Molecules › Button Group', () => {
+describe('Component › Molecule › Button Group', () => {
   it('create', () => {
     const Constructor = Vue.extend(ButtonGroup)
     const vm = new Constructor().$mount()

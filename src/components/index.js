@@ -8,6 +8,7 @@ import Breadcrumb from './molecules/breadcrumb'
 import BreadcrumbItem from './atoms/breadcrumb-item'
 import Button from './atoms/button'
 import ButtonGroup from './molecules/button-group'
+import Card from './molecules/card'
 import Carousel from './molecules/carousel'
 import CarouselItem from './atoms/carousel-item'
 import Cascader from './molecules/cascader'
@@ -34,6 +35,7 @@ import MapBlock from './organisms/map-block'
 import Menu from './molecules/menu'
 import MenuItem from './atoms/menu-item'
 import MenuItemGroup from './molecules/menu-item-group'
+import Popover from './atoms/popover'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
@@ -41,6 +43,7 @@ import Row from './molecules/row'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
+import Tooltip from './atoms/tooltip'
 
 export {
   Alert,
@@ -51,6 +54,7 @@ export {
   BreadcrumbItem,
   Button,
   ButtonGroup,
+  Card,
   Carousel,
   CarouselItem,
   Cascader,
@@ -77,11 +81,13 @@ export {
   Menu,
   MenuItem,
   MenuItemGroup,
+  Popover,
   Radio,
   RadioButton,
   RadioGroup,
   Row,
   Submenu,
   Switch,
-  Tag
+  Tag,
+  Tooltip
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Cascader from '@/components/molecules/cascader'
 
-describe('Component › Molecules › Cascader', () => {
+describe('Component › Molecule › Cascader', () => {
   it('create', () => {
     const Constructor = Vue.extend(Cascader)
     const vm = new Constructor({

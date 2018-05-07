@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Col from '@/components/molecules/col'
 
-describe('Component › Molecules › Column', () => {
+describe('Component › Molecule › Column', () => {
   it('create', () => {
     const Constructor = Vue.extend(Col)
     const vm = new Constructor().$mount()

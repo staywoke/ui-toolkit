@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Carousel from '@/components/molecules/carousel'
 
-describe('Component › Molecules › Carousel', () => {
+describe('Component › Molecule › Carousel', () => {
   it('create', () => {
     const Constructor = Vue.extend(Carousel)
     const vm = new Constructor().$mount()
