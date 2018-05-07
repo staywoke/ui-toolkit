@@ -9,8 +9,11 @@ import Col from './col'
 import Collapse from './collapse'
 import Dropdown from './dropdown'
 import DropdownMenu from './dropdown-menu'
+import Menu from './menu'
+import MenuItemGroup from './menu-item-group'
 import RadioGroup from './radio-group'
 import Row from './row'
+import Submenu from './submenu'
 
 export {
   Breadcrumb,
@@ -22,6 +25,9 @@ export {
   Collapse,
   Dropdown,
   DropdownMenu,
+  Menu,
+  MenuItemGroup,
   RadioGroup,
-  Row
+  Row,
+  Submenu
 }

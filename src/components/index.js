@@ -31,10 +31,14 @@ import InputNumber from './atoms/input-number'
 import Logo from './atoms/logo'
 import Main from './organisms/main'
 import MapBlock from './organisms/map-block'
+import Menu from './molecules/menu'
+import MenuItem from './atoms/menu-item'
+import MenuItemGroup from './molecules/menu-item-group'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
 import Row from './molecules/row'
+import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
 
@@ -70,10 +74,14 @@ export {
   Logo,
   Main,
   MapBlock,
+  Menu,
+  MenuItem,
+  MenuItemGroup,
   Radio,
   RadioButton,
   RadioGroup,
   Row,
+  Submenu,
   Switch,
   Tag
 }

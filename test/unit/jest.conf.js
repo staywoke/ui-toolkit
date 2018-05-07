@@ -28,7 +28,10 @@ module.exports = {
     '!src/components/atoms/carousel-item/*',
     '!src/components/atoms/collapse-item/*',
     '!src/components/atoms/dropdown-item/*',
+    '!src/components/atoms/menu-item/*',
     '!src/components/molecules/dropdown/*',
-    '!src/components/molecules/dropdown-menu/*'
+    '!src/components/molecules/dropdown-menu/*',
+    '!src/components/molecules/menu-item-group/*',
+    '!src/components/molecules/submenu/*'
   ]
 }

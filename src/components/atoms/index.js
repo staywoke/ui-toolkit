@@ -16,6 +16,7 @@ import Icon from './icon'
 import Input from './input'
 import InputNumber from './input-number'
 import Logo from './logo'
+import MenuItem from './menu-item'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Switch from './switch'
@@ -38,6 +39,7 @@ export {
   Input,
   InputNumber,
   Logo,
+  MenuItem,
   Radio,
   RadioButton,
   Switch,
