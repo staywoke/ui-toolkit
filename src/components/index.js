@@ -38,6 +38,7 @@ import MenuItemGroup from './molecules/menu-item-group'
 import Option from './atoms/option'
 import OptionGroup from './molecules/option-group'
 import Popover from './atoms/popover'
+import Progress from './atoms/progress'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
@@ -46,6 +47,7 @@ import Row from './molecules/row'
 import Scrollbar from './atoms/scrollbar'
 import Select from './atoms/select'
 import Slider from './atoms/slider'
+import Spinner from './atoms/spinner'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
@@ -92,6 +94,7 @@ export {
   Option,
   OptionGroup,
   Popover,
+  Progress,
   Radio,
   RadioButton,
   RadioGroup,
@@ -100,6 +103,7 @@ export {
   Scrollbar,
   Select,
   Slider,
+  Spinner,
   Submenu,
   Switch,
   Tag,

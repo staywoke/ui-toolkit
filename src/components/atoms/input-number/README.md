@@ -7,7 +7,7 @@ Atom › Input Number
 #### Template:
 
 ```xml
-<el-input-number ${attributes}
+<el-input-number
   placeholder="Placeholder"
   v-model="input"
   @blur="blurHandler"

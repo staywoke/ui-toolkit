@@ -19,12 +19,14 @@ import Logo from './logo'
 import MenuItem from './menu-item'
 import Option from './option'
 import Popover from './popover'
+import Progress from './progress'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Rate from './rate'
 import Scrollbar from './scrollbar'
 import Select from './select'
 import Slider from './slider'
+import Spinner from './spinner'
 import Switch from './switch'
 import Tag from './tag'
 import TimePicker from './time-picker'
@@ -51,12 +53,14 @@ export {
   MenuItem,
   Option,
   Popover,
+  Progress,
   Radio,
   RadioButton,
   Rate,
   Scrollbar,
   Select,
   Slider,
+  Spinner,
   Switch,
   Tag,
   TimePicker,

@@ -7,24 +7,24 @@ Atom › Slider
 #### Template:
 
 ```xml
-<el-input-number ${attributes}
-  placeholder="Placeholder"
+<el-slider
   v-model="input"
-  @blur="blurHandler"
-  @focus="focusHandler"
+  range
+  show-stops
   @change="changeHandler"
+  :max="10"
 />
 ```
 
 
 #### Script:
 ```js
-import { InputNumber } from 'ui-toolkit'
+import { Slider } from 'ui-toolkit'
 
 export default {
   name: 'MyComponent',
   components: {
-    InputNumber
+    Slider
   },
   data () {
     return {
@@ -32,8 +32,6 @@ export default {
     }
   },
   methods: {
-    blurHandler() {},
-    focusHandler() {},
     changeHandler() {}
   }
 }
@@ -42,5 +40,5 @@ export default {
 
 #### Documentation:
 
-* [Input Number Component Docs](https://element.eleme.io/#/en-US/component/input-number)
-* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/input-number)
+* [Slider Component Docs](https://element.eleme.io/#/en-US/component/slider)
+* [StayWoke Source](https://github.com/staywoke/ui-toolkit/tree/master/src/components/atoms/slider)
