@@ -43,7 +43,9 @@ import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
 import Rate from './atoms/rate'
 import Row from './molecules/row'
+import Scrollbar from './atoms/scrollbar'
 import Select from './atoms/select'
+import Slider from './atoms/slider'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
@@ -95,7 +97,9 @@ export {
   RadioGroup,
   Rate,
   Row,
+  Scrollbar,
   Select,
+  Slider,
   Submenu,
   Switch,
   Tag,

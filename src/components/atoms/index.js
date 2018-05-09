@@ -22,7 +22,9 @@ import Popover from './popover'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Rate from './rate'
+import Scrollbar from './scrollbar'
 import Select from './select'
+import Slider from './slider'
 import Switch from './switch'
 import Tag from './tag'
 import TimePicker from './time-picker'
@@ -52,7 +54,9 @@ export {
   Radio,
   RadioButton,
   Rate,
+  Scrollbar,
   Select,
+  Slider,
   Switch,
   Tag,
   TimePicker,

@@ -31,6 +31,7 @@ module.exports = {
     '!src/components/atoms/menu-item/*',
     '!src/components/atoms/option/*',
     '!src/components/atoms/popover/*',
+    '!src/components/atoms/scrollbar/*',
     '!src/components/atoms/tooltip/*',
     '!src/components/molecules/dropdown/*',
     '!src/components/molecules/dropdown-menu/*',
