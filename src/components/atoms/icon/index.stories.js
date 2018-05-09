@@ -104,7 +104,7 @@ stories.add('› All Icons', () => {
     template: `<el-container class="icon-demo-container">
       <el-container class="icon-demo-wrapper" v-for="icon in icons" :key="icon">
         <el-icon :name="icon" />
-        <small>{{icon}}</span>
+        <small>{{icon}}</small>
       </el-container>
     </el-container>`,
     data () {

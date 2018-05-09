@@ -39,10 +39,13 @@ import Popover from './atoms/popover'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
+import Rate from './atoms/rate'
 import Row from './molecules/row'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
+import TimePicker from './atoms/time-picker'
+import TimeSelect from './atoms/time-select'
 import Tooltip from './atoms/tooltip'
 
 export {
@@ -85,9 +88,12 @@ export {
   Radio,
   RadioButton,
   RadioGroup,
+  Rate,
   Row,
   Submenu,
   Switch,
   Tag,
+  TimePicker,
+  TimeSelect,
   Tooltip
 }

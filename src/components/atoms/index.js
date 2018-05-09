@@ -20,8 +20,11 @@ import MenuItem from './menu-item'
 import Popover from './popover'
 import Radio from './radio'
 import RadioButton from './radio-button'
+import Rate from './rate'
 import Switch from './switch'
 import Tag from './tag'
+import TimePicker from './time-picker'
+import TimeSelect from './time-select'
 import Tooltip from './tooltip'
 
 export {
@@ -45,7 +48,10 @@ export {
   Popover,
   Radio,
   RadioButton,
+  Rate,
   Switch,
   Tag,
+  TimePicker,
+  TimeSelect,
   Tooltip
 }
