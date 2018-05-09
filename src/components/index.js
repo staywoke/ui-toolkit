@@ -35,12 +35,15 @@ import MapBlock from './organisms/map-block'
 import Menu from './molecules/menu'
 import MenuItem from './atoms/menu-item'
 import MenuItemGroup from './molecules/menu-item-group'
+import Option from './atoms/option'
+import OptionGroup from './molecules/option-group'
 import Popover from './atoms/popover'
 import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
 import Rate from './atoms/rate'
 import Row from './molecules/row'
+import Select from './atoms/select'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import Tag from './atoms/tag'
@@ -84,12 +87,15 @@ export {
   Menu,
   MenuItem,
   MenuItemGroup,
+  Option,
+  OptionGroup,
   Popover,
   Radio,
   RadioButton,
   RadioGroup,
   Rate,
   Row,
+  Select,
   Submenu,
   Switch,
   Tag,

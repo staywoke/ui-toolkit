@@ -29,11 +29,13 @@ module.exports = {
     '!src/components/atoms/collapse-item/*',
     '!src/components/atoms/dropdown-item/*',
     '!src/components/atoms/menu-item/*',
+    '!src/components/atoms/option/*',
     '!src/components/atoms/popover/*',
     '!src/components/atoms/tooltip/*',
     '!src/components/molecules/dropdown/*',
     '!src/components/molecules/dropdown-menu/*',
     '!src/components/molecules/menu-item-group/*',
+    '!src/components/molecules/option-group/*',
     '!src/components/molecules/submenu/*'
   ]
 }

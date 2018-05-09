@@ -17,10 +17,12 @@ import Input from './input'
 import InputNumber from './input-number'
 import Logo from './logo'
 import MenuItem from './menu-item'
+import Option from './option'
 import Popover from './popover'
 import Radio from './radio'
 import RadioButton from './radio-button'
 import Rate from './rate'
+import Select from './select'
 import Switch from './switch'
 import Tag from './tag'
 import TimePicker from './time-picker'
@@ -45,10 +47,12 @@ export {
   InputNumber,
   Logo,
   MenuItem,
+  Option,
   Popover,
   Radio,
   RadioButton,
   Rate,
+  Select,
   Switch,
   Tag,
   TimePicker,

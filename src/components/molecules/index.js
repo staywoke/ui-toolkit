@@ -12,6 +12,7 @@ import Dropdown from './dropdown'
 import DropdownMenu from './dropdown-menu'
 import Menu from './menu'
 import MenuItemGroup from './menu-item-group'
+import OptionGroup from './option-group'
 import RadioGroup from './radio-group'
 import Row from './row'
 import Submenu from './submenu'
@@ -29,6 +30,7 @@ export {
   DropdownMenu,
   Menu,
   MenuItemGroup,
+  OptionGroup,
   RadioGroup,
   Row,
   Submenu
