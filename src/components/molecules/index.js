@@ -10,6 +10,7 @@ import Col from './col'
 import Collapse from './collapse'
 import Dropdown from './dropdown'
 import DropdownMenu from './dropdown-menu'
+import Form from './form'
 import Menu from './menu'
 import MenuItemGroup from './menu-item-group'
 import OptionGroup from './option-group'
@@ -28,6 +29,7 @@ export {
   Collapse,
   Dropdown,
   DropdownMenu,
+  Form,
   Menu,
   MenuItemGroup,
   OptionGroup,

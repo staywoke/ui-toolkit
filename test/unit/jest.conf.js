@@ -28,6 +28,7 @@ module.exports = {
     '!src/components/atoms/carousel-item/*',
     '!src/components/atoms/collapse-item/*',
     '!src/components/atoms/dropdown-item/*',
+    '!src/components/atoms/form-item/*',
     '!src/components/atoms/menu-item/*',
     '!src/components/atoms/option/*',
     '!src/components/atoms/popover/*',
