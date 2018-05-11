@@ -24,6 +24,7 @@ import DatePicker from './atoms/date-picker'
 import Dropdown from './molecules/dropdown'
 import DropdownItem from './atoms/dropdown-item'
 import DropdownMenu from './molecules/dropdown-menu'
+import FontAwesomeIcon from './atoms/font-awesome-icon'
 import Footer from './organisms/footer'
 import Form from './molecules/form'
 import FormItem from './atoms/form-item'
@@ -82,6 +83,7 @@ export {
   Dropdown,
   DropdownItem,
   DropdownMenu,
+  FontAwesomeIcon,
   Footer,
   Form,
   FormItem,

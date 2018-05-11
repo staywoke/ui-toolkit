@@ -12,6 +12,7 @@ import CollapseItem from './collapse-item'
 import ColorPicker from './color-picker'
 import DatePicker from './date-picker'
 import DropdownItem from './dropdown-item'
+import FontAwesomeIcon from './font-awesome-icon'
 import FormItem from './form-item'
 import Icon from './icon'
 import Input from './input'
@@ -47,6 +48,7 @@ export {
   ColorPicker,
   DatePicker,
   DropdownItem,
+  FontAwesomeIcon,
   FormItem,
   Icon,
   Input,
