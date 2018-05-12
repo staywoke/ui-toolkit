@@ -53,10 +53,13 @@ import Slider from './atoms/slider'
 import Spinner from './atoms/spinner'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
+import TabPane from './atoms/tab-pane'
+import Tabs from './molecules/tabs'
 import Tag from './atoms/tag'
 import TimePicker from './atoms/time-picker'
 import TimeSelect from './atoms/time-select'
 import Tooltip from './atoms/tooltip'
+import Tree from './molecules/tree'
 
 export {
   Alert,
@@ -112,8 +115,11 @@ export {
   Spinner,
   Submenu,
   Switch,
+  TabPane,
+  Tabs,
   Tag,
   TimePicker,
   TimeSelect,
-  Tooltip
+  Tooltip,
+  Tree
 }

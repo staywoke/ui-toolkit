@@ -30,6 +30,7 @@ import Select from './select'
 import Slider from './slider'
 import Spinner from './spinner'
 import Switch from './switch'
+import TabPane from './tab-pane'
 import Tag from './tag'
 import TimePicker from './time-picker'
 import TimeSelect from './time-select'
@@ -66,6 +67,7 @@ export {
   Slider,
   Spinner,
   Switch,
+  TabPane,
   Tag,
   TimePicker,
   TimeSelect,

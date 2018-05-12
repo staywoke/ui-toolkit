@@ -17,6 +17,8 @@ import OptionGroup from './option-group'
 import RadioGroup from './radio-group'
 import Row from './row'
 import Submenu from './submenu'
+import Tabs from './tabs'
+import Tree from './tree'
 
 export {
   Breadcrumb,
@@ -35,5 +37,7 @@ export {
   OptionGroup,
   RadioGroup,
   Row,
-  Submenu
+  Submenu,
+  Tabs,
+  Tree
 }
