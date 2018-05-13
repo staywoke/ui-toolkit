@@ -17,6 +17,7 @@ import OptionGroup from './option-group'
 import RadioGroup from './radio-group'
 import Row from './row'
 import Submenu from './submenu'
+import Table from './table'
 import Tabs from './tabs'
 import Tree from './tree'
 
@@ -38,6 +39,7 @@ export {
   RadioGroup,
   Row,
   Submenu,
+  Table,
   Tabs,
   Tree
 }

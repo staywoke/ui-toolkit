@@ -21,6 +21,7 @@ import CollapseItem from './atoms/collapse-item'
 import ColorPicker from './atoms/color-picker'
 import Container from './organisms/container'
 import DatePicker from './atoms/date-picker'
+import Dialog from './atoms/dialog'
 import Dropdown from './molecules/dropdown'
 import DropdownItem from './atoms/dropdown-item'
 import DropdownMenu from './molecules/dropdown-menu'
@@ -54,6 +55,8 @@ import Spinner from './atoms/spinner'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import TabPane from './atoms/tab-pane'
+import Table from './molecules/table'
+import TableColumn from './atoms/table-column'
 import Tabs from './molecules/tabs'
 import Tag from './atoms/tag'
 import TimePicker from './atoms/time-picker'
@@ -83,6 +86,7 @@ export {
   ColorPicker,
   Container,
   DatePicker,
+  Dialog,
   Dropdown,
   DropdownItem,
   DropdownMenu,
@@ -116,6 +120,8 @@ export {
   Submenu,
   Switch,
   TabPane,
+  Table,
+  TableColumn,
   Tabs,
   Tag,
   TimePicker,

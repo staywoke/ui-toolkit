@@ -11,6 +11,7 @@ import CheckboxButton from './checkbox-button'
 import CollapseItem from './collapse-item'
 import ColorPicker from './color-picker'
 import DatePicker from './date-picker'
+import Dialog from './dialog'
 import DropdownItem from './dropdown-item'
 import FontAwesomeIcon from './font-awesome-icon'
 import FormItem from './form-item'
@@ -31,6 +32,7 @@ import Slider from './slider'
 import Spinner from './spinner'
 import Switch from './switch'
 import TabPane from './tab-pane'
+import TableColumn from './table-column'
 import Tag from './tag'
 import TimePicker from './time-picker'
 import TimeSelect from './time-select'
@@ -48,6 +50,7 @@ export {
   CollapseItem,
   ColorPicker,
   DatePicker,
+  Dialog,
   DropdownItem,
   FontAwesomeIcon,
   FormItem,
@@ -68,6 +71,7 @@ export {
   Spinner,
   Switch,
   TabPane,
+  TableColumn,
   Tag,
   TimePicker,
   TimeSelect,
