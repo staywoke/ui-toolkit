@@ -34,6 +34,7 @@ module.exports = {
     '!src/components/atoms/popover/*',
     '!src/components/atoms/scrollbar/*',
     '!src/components/atoms/spinner/*',
+    '!src/components/atoms/step/*',
     '!src/components/atoms/table-column/*',
     '!src/components/atoms/tab-pane/*',
     '!src/components/atoms/tooltip/*',

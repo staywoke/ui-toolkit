@@ -41,6 +41,7 @@ import MenuItem from './atoms/menu-item'
 import MenuItemGroup from './molecules/menu-item-group'
 import Option from './atoms/option'
 import OptionGroup from './molecules/option-group'
+import Pagination from './molecules/pagination'
 import Popover from './atoms/popover'
 import Progress from './atoms/progress'
 import Radio from './atoms/radio'
@@ -52,6 +53,8 @@ import Scrollbar from './atoms/scrollbar'
 import Select from './atoms/select'
 import Slider from './atoms/slider'
 import Spinner from './atoms/spinner'
+import Step from './atoms/step'
+import Steps from './molecules/steps'
 import Submenu from './molecules/submenu'
 import Switch from './atoms/switch'
 import TabPane from './atoms/tab-pane'
@@ -62,7 +65,9 @@ import Tag from './atoms/tag'
 import TimePicker from './atoms/time-picker'
 import TimeSelect from './atoms/time-select'
 import Tooltip from './atoms/tooltip'
+import Transfer from './molecules/transfer'
 import Tree from './molecules/tree'
+import Upload from './molecules/upload'
 
 export {
   Alert,
@@ -106,6 +111,7 @@ export {
   MenuItemGroup,
   Option,
   OptionGroup,
+  Pagination,
   Popover,
   Progress,
   Radio,
@@ -117,6 +123,8 @@ export {
   Select,
   Slider,
   Spinner,
+  Step,
+  Steps,
   Submenu,
   Switch,
   TabPane,
@@ -127,5 +135,7 @@ export {
   TimePicker,
   TimeSelect,
   Tooltip,
-  Tree
+  Transfer,
+  Tree,
+  Upload
 }

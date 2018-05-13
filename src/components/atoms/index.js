@@ -30,6 +30,7 @@ import Scrollbar from './scrollbar'
 import Select from './select'
 import Slider from './slider'
 import Spinner from './spinner'
+import Step from './step'
 import Switch from './switch'
 import TabPane from './tab-pane'
 import TableColumn from './table-column'
@@ -69,6 +70,7 @@ export {
   Select,
   Slider,
   Spinner,
+  Step,
   Switch,
   TabPane,
   TableColumn,

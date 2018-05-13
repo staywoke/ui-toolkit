@@ -14,12 +14,16 @@ import Form from './form'
 import Menu from './menu'
 import MenuItemGroup from './menu-item-group'
 import OptionGroup from './option-group'
+import Pagination from './pagination'
 import RadioGroup from './radio-group'
 import Row from './row'
+import Steps from './steps'
 import Submenu from './submenu'
 import Table from './table'
 import Tabs from './tabs'
+import Transfer from './transfer'
 import Tree from './tree'
+import Upload from './upload'
 
 export {
   Breadcrumb,
@@ -36,10 +40,14 @@ export {
   Menu,
   MenuItemGroup,
   OptionGroup,
+  Pagination,
   RadioGroup,
   Row,
+  Steps,
   Submenu,
   Table,
   Tabs,
-  Tree
+  Transfer,
+  Tree,
+  Upload
 }
