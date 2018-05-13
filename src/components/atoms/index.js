@@ -18,8 +18,12 @@ import FormItem from './form-item'
 import Icon from './icon'
 import Input from './input'
 import InputNumber from './input-number'
+import Loading from './loading'
 import Logo from './logo'
 import MenuItem from './menu-item'
+import Message from './message'
+import MessageBox from './message-box'
+import Notification from './notification'
 import Option from './option'
 import Popover from './popover'
 import Progress from './progress'
@@ -58,8 +62,12 @@ export {
   Icon,
   Input,
   InputNumber,
+  Loading,
   Logo,
   MenuItem,
+  Message,
+  MessageBox,
+  Notification,
   Option,
   Popover,
   Progress,

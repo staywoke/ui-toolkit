@@ -4,7 +4,6 @@ import Aside from './aside'
 import Container from './container'
 import Footer from './footer'
 import Header from './header'
-import Main from './main'
 import MapBlock from './map-block'
 
 export {
@@ -12,6 +11,5 @@ export {
   Container,
   Footer,
   Header,
-  Main,
   MapBlock
 }

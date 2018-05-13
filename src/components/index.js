@@ -33,12 +33,15 @@ import Header from './organisms/header'
 import Icon from './atoms/icon'
 import Input from './atoms/input'
 import InputNumber from './atoms/input-number'
+import Loading from './atoms/loading'
 import Logo from './atoms/logo'
-import Main from './organisms/main'
 import MapBlock from './organisms/map-block'
 import Menu from './molecules/menu'
 import MenuItem from './atoms/menu-item'
 import MenuItemGroup from './molecules/menu-item-group'
+import Message from './atoms/message'
+import MessageBox from './atoms/message-box'
+import Notification from './atoms/notification'
 import Option from './atoms/option'
 import OptionGroup from './molecules/option-group'
 import Pagination from './molecules/pagination'
@@ -103,12 +106,15 @@ export {
   Icon,
   Input,
   InputNumber,
+  Loading,
   Logo,
-  Main,
   MapBlock,
   Menu,
   MenuItem,
   MenuItemGroup,
+  Message,
+  MessageBox,
+  Notification,
   Option,
   OptionGroup,
   Pagination,
