@@ -29,12 +29,12 @@ stories.add('Component Overview', () => {
     ''
   )
 
-  const formHeader = text('Form Header', 'StayWoke Login')
+  const formHeader = text('Form Header', 'Login')
 
   let attributes = ''
 
   attributes = attributes.concat((loginMode !== '' && loginMode !== 'both') ? `login-mode="${loginMode}" ` : '')
-    .concat((formHeader !== 'StayWoke Login') ? `form-header="${formHeader}" ` : '')
+    .concat((formHeader !== 'Login') ? `form-header="${formHeader}" ` : '')
 
   attributes = attributes.trim()
 

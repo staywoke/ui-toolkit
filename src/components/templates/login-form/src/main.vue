@@ -6,24 +6,24 @@
       <h2>{{ formHeader }}</h2>
     </el-form-item>
 
-    <el-form-item :label="usernameLabel" prop="username">
-      <el-input type="text" v-username v-model.trim="loginForm.username" auto-complete="off" v-if="loginMode === 'username'" />
-      <el-input type="email" v-email-address v-model.trim="loginForm.username" auto-complete="off" v-if="loginMode === 'email'" />
-      <el-input type="text" v-mixed v-model.trim="loginForm.username" auto-complete="off" v-if="loginMode === 'both'" />
+    <el-form-item :label="usernameLabel" prop="username" class="username-wrapper" ref="username">
+      <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" auto-complete="off" />
+      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" auto-complete="off" />
+      <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" auto-complete="off" />
     </el-form-item>
 
-    <el-form-item label="Password" prop="password">
-      <el-input type="password" v-model.trim="loginForm.password" auto-complete="off" />
+    <el-form-item label="Password" prop="password" class="password-wrapper" ref="password">
+      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="loginForm.password" auto-complete="off" />
     </el-form-item>
 
     <el-form-item>
-      <el-button type="primary" @click="submitForm('loginForm')">Login</el-button>
+      <el-button type="primary" class="submit" @click="submitForm('loginForm')">Login</el-button>
     </el-form-item>
 
     <el-form-item class="other-options">
-      <el-button type="text" @click="forgotPassword">Forgot Password</el-button>
+      <el-button type="text" class="forgot-password" @click="forgotPassword">Forgot Password</el-button>
       <span>|</span>
-      <el-button type="text" @click="signUp">Sign Up</el-button>
+      <el-button type="text" class="sign-up" @click="signUp">Sign Up</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -58,7 +58,7 @@ export default {
   props: {
     formHeader: {
       type: String,
-      default: 'StayWoke Login'
+      default: 'Login'
     },
     loginMode: {
       type: String,
@@ -76,21 +76,25 @@ export default {
   },
   data () {
     const validateUsername = (rule, value, callback) => {
-      if (value !== '' && value.indexOf('@') !== -1 && !this.validEmail(value)) {
-        return callback(new Error('Invalid Email Address'))
-      } else if (value !== '' && value.indexOf('@') === -1) {
-        if (value.length < 6) {
-          return callback(new Error('Username to Short'))
-        } else if (value.charAt(0) === '_') {
-          return callback(new Error('Username cannot start with _'))
-        } else if (!this.validUsername(value)) {
-          return callback(new Error('Invalid Username'))
-        }
-      } else if (value === '') {
-        return callback(new Error(`Please enter a ${this.getUsernameLabel()}`))
+      if (value === '') {
+        callback(new Error(`Please enter a ${this.getUsernameLabel()}`))
       }
 
-      return callback()
+      if (value !== '' && value.indexOf('@') !== -1 && !this.validEmail(value)) {
+        callback(new Error('Invalid Email Address'))
+      }
+
+      if (value !== '' && value.indexOf('@') === -1) {
+        if (value.length < 6) {
+          callback(new Error('Username to Short'))
+        } else if (value.charAt(0) === '_') {
+          callback(new Error('Username cannot start with _'))
+        } else if (!this.validUsername(value)) {
+          callback(new Error('Invalid Username'))
+        }
+      }
+
+      callback()
     }
 
     return {
@@ -117,6 +121,10 @@ export default {
     }
   },
   methods: {
+    changeInput (inputName) {
+      this.$refs[inputName].clearValidate()
+      this.$emit('inputChanged', inputName)
+    },
     getUsernameLabel () {
       return (this.loginMode === 'both')
         ? 'Username or Email Address'
@@ -141,6 +149,7 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
+          this.$emit('loginSuccess')
           this.showError('@TODO: Connect to Lambda')
           // lambda.login(this.loginForm).then(response => {
           //   this.$emit('loginSuccess')
@@ -149,6 +158,7 @@ export default {
           //   this.showError(err)
           // })
         } else {
+          this.showError('Check your Username & Password')
           this.$emit('loginError', 'Invalid Form')
           return false
         }

@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "npm run -s build:entry && webpack-dev-server --mode development --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run -s build:entry && npm run dev",
-    "unit": "jest --verbose --config test/unit/jest.conf.js --coverage",
+    "unit": "jest --verbose --silent --config test/unit/jest.conf.js --coverage",
     "unit:coverage": "http-server ./test/unit/coverage/lcov-report -o -s -p8083 -c-1 --cors",
     "unit:single": "jest --verbose --onlyChanged --runInBand --config test/unit/jest.conf.js",
     "test": "npm run -s lint && npm run -s unit",
@@ -109,6 +109,7 @@
     "vue-loader": "^14.2.2",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.5.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.14",
