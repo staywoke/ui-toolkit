@@ -36,7 +36,8 @@
     "@fortawesome/fontawesome-pro-regular": "^5.0.13",
     "@fortawesome/fontawesome-pro-solid": "^5.0.13",
     "@fortawesome/vue-fontawesome": "0.0.22",
-    "element-ui": "^2.3.3",
+    "aws-sdk": "^2.238.1",
+    "element-ui": "^2.3.8",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },

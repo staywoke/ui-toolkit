@@ -37,19 +37,19 @@
     width: 100vw;
   }
 
-  .vue-info h2 {
+  .vue-info > h2 {
     display: none;
   }
 
-  .vue-info pre {
+  .vue-info > pre {
     opacity: 0;
   }
 
-  .vue-info pre.highlighted {
+  .vue-info > pre.highlighted {
     opacity: 1;
   }
 
-  .vue-info .code {
+  .vue-info > .code {
     padding: 0 !important;
     border-radius: 0 !important;
     position: fixed;
@@ -65,14 +65,14 @@
     background: #FFF;
   }
 
-  .vue-info .code.open {
+  .vue-info > .code.open {
     height: unset;
     overflow: unset;
     padding: 14px !important;
     border: 1px solid #eaeaea;
   }
 
-  .vue-info .props {
+  .vue-info > .props {
     position: fixed;
     bottom: 11px;
     left: 10px;
@@ -83,48 +83,48 @@
     max-width: calc(100vw - 20px);
   }
 
-  .vue-info .props tbody {
+  .vue-info > .props tbody {
     max-height: calc(100vh - 58px) !important;
     display: block !important;
     overflow: auto !important;
   }
 
-  .vue-info .props thead {
+  .vue-info > .props thead {
     background-color: #f7f7f7;
     font-size: 14px;
   }
 
-  .vue-info .props th {
+  .vue-info > .props th {
     background-color: #f7f7f7;
     font-size: 14px;
     font-weight: 500 !important;
     color: #333 !important;
   }
 
-  .vue-info .props thead, .vue-info .props tbody tr {
+  .vue-info > .props thead, .vue-info > .props tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed;
     color: #666;
   }
 
-  .vue-info .props tr {
+  .vue-info > .props tr {
     border-bottom: 1px solid #eaeaea !important;
     font-size: 14px;
   }
 
-  .vue-info .props tbody tr:nth-child(even) {
+  .vue-info > .props tbody tr:nth-child(even) {
     background: #fdfdfd;
   }
-  .vue-info .props tbody tr:nth-child(odd) {
+  .vue-info > .props tbody tr:nth-child(odd) {
     background: #ffffff;
   }
 
-  .vue-info .props tr:last-child {
+  .vue-info > .props tr:last-child {
     border-bottom: none !important;
   }
 
-  .vue-info .props.open {
+  .vue-info > .props.open {
     display: unset;
   }
 

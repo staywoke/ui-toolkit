@@ -34,7 +34,9 @@ import Icon from './atoms/icon'
 import Input from './atoms/input'
 import InputNumber from './atoms/input-number'
 import Loading from './atoms/loading'
+import LoginForm from './templates/login-form'
 import Logo from './atoms/logo'
+import Main from './organisms/main'
 import MapBlock from './organisms/map-block'
 import Menu from './molecules/menu'
 import MenuItem from './atoms/menu-item'
@@ -107,7 +109,9 @@ export {
   Input,
   InputNumber,
   Loading,
+  LoginForm,
   Logo,
+  Main,
   MapBlock,
   Menu,
   MenuItem,

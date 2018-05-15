@@ -22,7 +22,6 @@ import Submenu from './submenu'
 import Table from './table'
 import Tabs from './tabs'
 import Transfer from './transfer'
-import Tree from './tree'
 import Upload from './upload'
 
 export {
@@ -48,6 +47,5 @@ export {
   Table,
   Tabs,
   Transfer,
-  Tree,
   Upload
 }
