@@ -28,6 +28,29 @@ UI Toolkit Components
 > UI Toolkit uses [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) Principles. Each component has example documentation for implementing in your Vue.js 2 Project.
 
 
+Pre-Setup Node Version Manager (NVM)
+---
+
+*Install NVM*
+
+Install [NVM](https://github.com/creationix/nvm#installation) to make working with the right version of Node automatic.
+
+Check that the following code was added to your profile (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
+
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This automagically loads nvm
+```
+
+*Setup NVM for this project*
+
+```bash
+nvm install v8.9.4
+```
+
+Now you can continue with installation.
+
+
 Developer Scripts
 ---
 
