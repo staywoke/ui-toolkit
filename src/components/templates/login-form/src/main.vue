@@ -38,7 +38,7 @@ import FormItem from '../../../atoms/form-item'
 import Input from '../../../atoms/input'
 import Button from '../../../atoms/button'
 
-// import lambda from './lambda'
+import lambda from './lambda'
 
 export default {
   name: 'LoginForm',
@@ -150,13 +150,13 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.$emit('loginSuccess')
-          this.showError('@TODO: Connect to Lambda')
-          // lambda.login(this.loginForm).then(response => {
-          //   this.$emit('loginSuccess')
-          //   console.log('login response', response)
-          // }).catch(err => {
-          //   this.showError(err)
-          // })
+          // this.showError('@TODO: Connect to Lambda')
+          lambda.login(this.loginForm).then(response => {
+            this.$emit('loginSuccess')
+            console.log('login response', response)
+          }).catch(err => {
+            this.showError(err)
+          })
         } else {
           this.showError('Check your Username & Password')
           this.$emit('loginError', 'Invalid Form')
