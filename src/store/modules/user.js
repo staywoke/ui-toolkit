@@ -17,7 +17,9 @@ const mutations = {
  */
 const getters = {
   getUserAccount: state => {
-    return state.account
+    return (typeof state.account.token !== 'undefined')
+      ? state.account
+      : null
   },
   getUserFullName: state => {
     return (state.account.first_name && state.account.last_name)
@@ -43,7 +45,7 @@ const getters = {
     return (typeof state.account.token !== 'undefined')
   },
   isSuperUser: state => {
-    return (state.account.role && state.account.role === 'superuser')
+    return (typeof state.account.role !== 'undefined' && state.account.role === 'superuser')
   }
 }
 
