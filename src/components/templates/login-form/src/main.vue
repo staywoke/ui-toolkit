@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import store from '../../../../store'
+
 import { Username, EmailAddress, Mixed } from '../../../../directives'
 
 import Container from '../../../organisms/container'
@@ -42,6 +44,7 @@ import lambda from './lambda'
 
 export default {
   name: 'LoginForm',
+  store,
   components: {
     Container,
     Form,
@@ -147,15 +150,14 @@ export default {
       this.$emit('signUp')
     },
     submitForm (formName) {
+      this.hideError()
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$emit('loginSuccess')
-          // this.showError('@TODO: Connect to Lambda')
           lambda.login(this.loginForm).then(response => {
-            this.$emit('loginSuccess')
-            console.log('login response', response)
+            this.$emit('loginSuccess', response)
+            this.$store.dispatch('userLogin', response)
           }).catch(err => {
-            this.showError(err)
+            this.showError(err.message)
           })
         } else {
           this.showError('Check your Username & Password')

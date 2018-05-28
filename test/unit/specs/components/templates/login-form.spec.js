@@ -161,24 +161,6 @@ describe('Component › Templates › Login Form', () => {
     expect(wrapper.find('.password-wrapper').element.classList.contains('is-error')).toBe(true)
   })
 
-  it('valid form', () => {
-    const wrapper = mount(LoginForm)
-    const button = wrapper.find('button.submit')
-
-    wrapper.setData({
-      loginForm: {
-        username: 'testuser',
-        password: 'abc123'
-      }
-    })
-
-    button.trigger('click')
-
-    expect(wrapper.emitted('loginSuccess')).toBeTruthy()
-    expect(wrapper.find('.username-wrapper').element.classList.contains('is-error')).toBe(false)
-    expect(wrapper.find('.password-wrapper').element.classList.contains('is-error')).toBe(false)
-  })
-
   it('invalid email', () => {
     const wrapper = mount(LoginForm)
     const button = wrapper.find('button.submit')
