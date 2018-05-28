@@ -1,11 +1,13 @@
-const state = {}
+const state = {
+  account: {}
+}
 
 const mutations = {
   LOGIN (state, data) {
-    state = data
+    state.account = data
   },
   LOGOUT (state, data) {
-    state = {}
+    state.account = {}
   }
 }
 
@@ -15,33 +17,33 @@ const mutations = {
  */
 const getters = {
   getUserAccount: state => {
-    return state
+    return state.account
   },
   getUserFullName: state => {
-    return (state.first_name && state.last_name)
-      ? `${state.first_name} ${state.last_name}`
+    return (state.account.first_name && state.account.last_name)
+      ? `${state.account.first_name} ${state.account.last_name}`
       : null
   },
   getUserEmail: state => {
-    return (state.email)
-      ? state.email
+    return (state.account.email)
+      ? state.account.email
       : null
   },
   getUserRole: state => {
-    return (state.role)
-      ? state.role
+    return (state.account.role)
+      ? state.account.role
       : null
   },
   getUserToken: state => {
-    return (state.token)
-      ? state.token
+    return (state.account.token)
+      ? state.account.token
       : null
   },
   isLoggedIn: state => {
-    return (state && typeof state.token !== 'undefined')
+    return (typeof state.account.token !== 'undefined')
   },
   isSuperUser: state => {
-    return (state.role && state.role === 'superuser')
+    return (state.account.role && state.account.role === 'superuser')
   }
 }
 
