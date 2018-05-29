@@ -22,8 +22,8 @@ const getters = {
       : null
   },
   getUserFullName: state => {
-    return (state.account.first_name && state.account.last_name)
-      ? `${state.account.first_name} ${state.account.last_name}`
+    return (state.account.firstName && state.account.lastName)
+      ? `${state.account.firstName} ${state.account.lastName}`
       : null
   },
   getUserEmail: state => {
