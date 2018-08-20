@@ -7,13 +7,13 @@
     </el-form-item>
 
     <el-form-item :label="usernameLabel" prop="username" class="username-wrapper" ref="username">
-      <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" auto-complete="off" />
-      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" auto-complete="off" />
-      <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" auto-complete="off" />
+      <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" autocomplete="off" />
+      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" autocomplete="off" />
+      <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" autocomplete="off" />
     </el-form-item>
 
     <el-form-item label="Password" prop="password" class="password-wrapper" ref="password">
-      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="loginForm.password" auto-complete="off" />
+      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="loginForm.password" autocomplete="off" />
     </el-form-item>
 
     <el-form-item>
@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import store from '../../../../store'
-
 import { Username, EmailAddress, Mixed } from '../../../../directives'
 
 import Container from '../../../organisms/container'
@@ -40,11 +38,8 @@ import FormItem from '../../../atoms/form-item'
 import Input from '../../../atoms/input'
 import Button from '../../../atoms/button'
 
-import lambda from './lambda'
-
 export default {
   name: 'LoginForm',
-  store,
   components: {
     Container,
     Form,
@@ -153,12 +148,7 @@ export default {
       this.hideError()
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          lambda.login(this.loginForm).then(response => {
-            this.$emit('loginSuccess', response)
-            this.$store.dispatch('userLogin', response)
-          }).catch(err => {
-            this.showError(err.message)
-          })
+          this.$emit('loginValid')
         } else {
           this.showError('Check your Username & Password')
           this.$emit('loginError', 'Invalid Form')

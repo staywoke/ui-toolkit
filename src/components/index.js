@@ -27,6 +27,7 @@ import DropdownItem from './atoms/dropdown-item'
 import DropdownMenu from './molecules/dropdown-menu'
 import FontAwesomeIcon from './atoms/font-awesome-icon'
 import Footer from './organisms/footer'
+import ForgotPasswordForm from './templates/forgot-password-form'
 import Form from './molecules/form'
 import FormItem from './atoms/form-item'
 import Header from './organisms/header'
@@ -53,6 +54,7 @@ import Radio from './atoms/radio'
 import RadioButton from './atoms/radio-button'
 import RadioGroup from './molecules/radio-group'
 import Rate from './atoms/rate'
+import RegisterForm from './templates/register-form'
 import Row from './molecules/row'
 import Scrollbar from './atoms/scrollbar'
 import Select from './atoms/select'
@@ -102,6 +104,7 @@ export {
   DropdownMenu,
   FontAwesomeIcon,
   Footer,
+  ForgotPasswordForm,
   Form,
   FormItem,
   Header,
@@ -128,6 +131,7 @@ export {
   RadioButton,
   RadioGroup,
   Rate,
+  RegisterForm,
   Row,
   Scrollbar,
   Select,
