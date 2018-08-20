@@ -42,6 +42,8 @@ Then edit `.env` with your private information.  The values within `.env` can be
 
 e.g. `API_KEY=my_api_key` inside `.env` would be referenced in code as `process.env.API_KEY`
 
+*IMPORTANT: Changes to this file will required restarting storybook*
+
 Pre-Setup Node Version Manager (NVM)
 ---
 
@@ -83,3 +85,11 @@ npm test
 # run single unit test by name
 npm run -s unit:single -- -t 'Component › Atom › Checkbox'
 ```
+
+
+Debugging Vue
+---
+
+1. Install the [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) Chrome Extension
+2. Open Google Developer Tools
+3. Select the `Vue` tab & to debug state data, click the `Vuex` tab
