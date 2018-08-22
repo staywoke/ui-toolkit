@@ -150,6 +150,11 @@ export default {
       }
     }
   },
+  watch: {
+    errorMessage: (error) => {
+      this.formError = error
+    }
+  },
   methods: {
     changeInput (inputName) {
       this.$refs[inputName].clearValidate()
