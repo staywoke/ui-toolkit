@@ -46,6 +46,10 @@ export default {
     EmailAddress
   },
   props: {
+    errorMessage: {
+      type: String,
+      default: null
+    },
     formHeader: {
       type: String,
       default: 'Forgot Password'
@@ -53,7 +57,7 @@ export default {
   },
   data () {
     return {
-      formError: null,
+      formError: this.errorMessage  || '',
       forgotPasswordForm: {
         email: ''
       },

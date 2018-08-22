@@ -60,6 +60,7 @@ export default {
 Attribute               | Description                          | Type     | Accepted Values       | Default
 ------------------------|--------------------------------------|----------|-----------------------|------------
 formHeader              | Form Header                          | string   | --                    | StayWoke ForgotPassword
+errorMessage            | Error Message                        | string   | --                    | --
 login                   | Login Link Clicked                   | function | --                    | --
 signUp                  | Sign Up Link Clicked                 | function | --                    | --
 inputChanged            | Input Changed                        | function | --                    | --

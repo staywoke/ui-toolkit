@@ -30,11 +30,13 @@ stories.add('Component Overview', () => {
   )
 
   const formHeader = text('Form Header', 'Login')
+  const errorMessage = text('Error Message', '')
 
   let attributes = ''
 
   attributes = attributes.concat((loginMode !== '' && loginMode !== 'both') ? `login-mode="${loginMode}" ` : '')
     .concat((formHeader !== 'Login') ? `form-header="${formHeader}" ` : '')
+    .concat((errorMessage !== '') ? `error-message="${errorMessage}" ` : '')
 
   attributes = attributes.trim()
 

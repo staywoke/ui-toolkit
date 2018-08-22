@@ -66,6 +66,10 @@ export default {
     Numbers
   },
   props: {
+    errorMessage: {
+      type: String,
+      default: null
+    },
     formHeader: {
       type: String,
       default: 'Register'
@@ -101,7 +105,7 @@ export default {
     }
 
     return {
-      formError: null,
+      formError: this.errorMessage  || '',
       registerForm: {
         inviteCode: '',
         username: '',

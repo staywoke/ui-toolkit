@@ -31,12 +31,14 @@ stories.add('Component Overview', () => {
 
   const inviteOnly = boolean('Invite Only', true)
   const formHeader = text('Form Header', 'Register')
+  const errorMessage = text('Error Message', '')
 
   let attributes = ''
 
   attributes = attributes.concat((registerMode !== '' && registerMode !== 'both') ? `register-mode="${registerMode}" ` : '')
     .concat((formHeader !== 'Register') ? `form-header="${formHeader}" ` : '')
     .concat((inviteOnly) ? 'invite-only ' : '')
+    .concat((errorMessage !== '') ? `error-message="${errorMessage}" ` : '')
 
   attributes = attributes.trim()
 

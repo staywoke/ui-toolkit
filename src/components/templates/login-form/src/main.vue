@@ -54,6 +54,10 @@ export default {
     Mixed
   },
   props: {
+    errorMessage: {
+      type: String,
+      default: null
+    },
     formHeader: {
       type: String,
       default: 'Login'
@@ -96,7 +100,7 @@ export default {
     }
 
     return {
-      formError: null,
+      formError: this.errorMessage  || '',
       loginForm: {
         password: '',
         username: ''

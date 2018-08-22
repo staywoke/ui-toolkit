@@ -19,8 +19,12 @@ stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(contex
 
 stories.add('Component Overview', () => {
   const formHeader = text('Form Header', 'Forgot Password')
+  const errorMessage = text('Error Message', '')
 
-  let attributes = (formHeader !== 'Forgot Password') ? `form-header="${formHeader}" ` : ''
+  let attributes = ''
+
+  attributes = attributes.concat((formHeader !== 'Forgot Password') ? `form-header="${formHeader}" ` : '')
+    .concat((errorMessage !== '') ? `error-message="${errorMessage}" ` : '')
 
   return {
     template: `<sw-forgot-password-form ${attributes} :style="{ maxWidth: '360px', margin: '0 auto', textAlign: 'left' }"
