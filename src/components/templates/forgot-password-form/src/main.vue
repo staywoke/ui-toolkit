@@ -7,7 +7,7 @@
     </el-form-item>
 
     <el-form-item label="Email Address" prop="email" class="email-wrapper" ref="email">
-      <el-input @input="changeInput('email')" type="email" name="email" v-email-address v-model.trim="forgotPasswordForm.email" autocomplete="off" />
+      <el-input @input="changeInput('email')" type="email" name="email" v-email-address v-model.trim="forgotPasswordForm.email" />
     </el-form-item>
 
     <el-form-item>

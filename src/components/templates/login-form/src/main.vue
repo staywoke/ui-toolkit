@@ -7,13 +7,13 @@
     </el-form-item>
 
     <el-form-item :label="usernameLabel" prop="username" class="username-wrapper" ref="username">
-      <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" autocomplete="off" />
-      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" autocomplete="off" />
-      <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" autocomplete="off" />
+      <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" />
+      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" />
+      <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" />
     </el-form-item>
 
     <el-form-item label="Password" prop="password" class="password-wrapper" ref="password">
-      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="loginForm.password" autocomplete="off" />
+      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="loginForm.password" />
     </el-form-item>
 
     <el-form-item>

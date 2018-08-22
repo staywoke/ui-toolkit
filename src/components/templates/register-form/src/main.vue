@@ -1,5 +1,5 @@
 <template>
-  <el-form :model="registerForm" :rules="rules" ref="registerForm" label="top" size="small" class="register-form" status-icon autocomplete="off">
+  <el-form :model="registerForm" :rules="rules" ref="registerForm" label="top" size="small" class="register-form" status-icon>
     <el-alert :title="getErrorMessage" type="error" show-icon v-if="getErrorMessage" @close="hideError" class="register-error" />
 
     <el-form-item>
@@ -7,27 +7,27 @@
     </el-form-item>
 
     <el-form-item label="Invite Code" prop="inviteCode" class="invite-code-wrapper" ref="inviteCode" v-if="inviteOnly">
-      <el-input name="inviteCode" maxlength="6" minlength="6" @input="changeInput('inviteCode')" type="text" v-numbers v-model.trim="registerForm.inviteCode" autocomplete="off" />
+      <el-input name="inviteCode" maxlength="6" minlength="6" @input="changeInput('inviteCode')" type="text" v-numbers v-model.trim="registerForm.inviteCode" />
     </el-form-item>
 
     <el-form-item label="Email Address" prop="email" class="email-wrapper" ref="email">
-      <el-input name="email" @input="changeInput('email')" type="email" v-email-address v-model.trim="registerForm.email" autocomplete="off" />
+      <el-input name="email" @input="changeInput('email')" type="email" v-email-address v-model.trim="registerForm.email" />
     </el-form-item>
 
     <el-form-item label="Username" prop="username" class="username-wrapper" ref="username">
-      <el-input name="username" @input="changeInput('username')" type="text" v-username v-model.trim="registerForm.username" autocomplete="off" />
+      <el-input name="username" @input="changeInput('username')" type="text" v-username v-model.trim="registerForm.username" />
     </el-form-item>
 
     <el-form-item label="Password" prop="password" class="password-wrapper" ref="password">
-      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="registerForm.password" autocomplete="off" />
+      <el-input name="password" @input="changeInput('password')" type="password" v-model.trim="registerForm.password" />
     </el-form-item>
 
     <el-form-item label="First Name" prop="firstname" class="firstname-wrapper" ref="firstname">
-      <el-input name="firstname" @input="changeInput('firstname')" type="text" v-model.trim="registerForm.firstname" autocomplete="off" />
+      <el-input name="firstname" @input="changeInput('firstname')" type="text" v-model.trim="registerForm.firstname" />
     </el-form-item>
 
     <el-form-item label="Last Name" prop="lastname" class="lastname-wrapper" ref="lastname">
-      <el-input name="lastname" @input="changeInput('lastname')" type="text" v-model.trim="registerForm.lastname" autocomplete="off" />
+      <el-input name="lastname" @input="changeInput('lastname')" type="text" v-model.trim="registerForm.lastname" />
     </el-form-item>
 
     <el-form-item>
