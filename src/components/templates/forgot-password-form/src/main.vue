@@ -48,7 +48,7 @@ export default {
   props: {
     formHeader: {
       type: String,
-      default: 'Login'
+      default: 'Forgot Password'
     }
   },
   data () {
@@ -72,15 +72,19 @@ export default {
   methods: {
     changeInput (inputName) {
       this.$refs[inputName].clearValidate()
-      this.$emit('inputChanged', inputName)
+
+      this.$emit('inputChanged', {
+        name: inputName,
+        value: this.forgotPasswordForm[inputName]
+      })
     },
     hideError () {
       this.formError = null
-      this.$emit('hideLoginError')
+      this.$emit('hideForgotPasswordError')
     },
     showError (message) {
       this.formError = message
-      this.$emit('showLoginError', message)
+      this.$emit('showForgotPasswordError', message)
     },
     login () {
       this.$emit('login')
@@ -92,7 +96,7 @@ export default {
       this.hideError()
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$emit('forgotPasswordValid')
+          this.$emit('forgotPasswordValid', this.forgotPasswordForm)
         } else {
           this.showError('Invalid Email Address')
           this.$emit('forgotPasswordError', 'Invalid Form')

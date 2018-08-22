@@ -121,7 +121,13 @@ export default {
   methods: {
     changeInput (inputName) {
       this.$refs[inputName].clearValidate()
-      this.$emit('inputChanged', inputName)
+
+      if (inputName !== 'password') {
+        this.$emit('inputChanged', {
+          name: inputName,
+          value: this.loginForm[inputName]
+        })
+      }
     },
     getUsernameLabel () {
       return (this.loginMode === 'both')
@@ -148,7 +154,7 @@ export default {
       this.hideError()
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$emit('loginValid')
+          this.$emit('loginValid', this.loginForm)
         } else {
           this.showError('Check your Username & Password')
           this.$emit('loginError', 'Invalid Form')

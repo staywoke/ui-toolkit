@@ -9,10 +9,11 @@ Atom › Login Form
 ```xml
 <sw-login-form
   @signUp="signUp"
+  @inputChanged="inputChanged"
   @hideLoginError="hideLoginError"
   @showLoginError="showLoginError"
   @forgotPassword="forgotPassword"
-  @loginSuccess="loginSuccess"
+  @loginValid="loginValid"
   @loginError="loginError"
 />
 ```
@@ -31,6 +32,9 @@ export default {
     signUp() {
       console.log('Sign Up Clicked')
     },
+    inputChanged(input) {
+      console.log('Input Changed', input)
+    },
     hideLoginError() {
       console.log('Login Error Hidden')
     },
@@ -40,8 +44,8 @@ export default {
     forgotPassword() {
       console.log('Forgot Password Clicked')
     },
-    loginSuccess() {
-      console.log('Login Success')
+    loginValid() {
+      console.log('Login Valid')
     },
     loginError(message) {
       console.error('Login Error', message)
@@ -58,10 +62,11 @@ Attribute      | Description                  | Type     | Accepted Values      
 formHeader     | Form Header                  | string   | --                    | StayWoke Login
 loginMode      | Login Mode ( username type)  | string   | username, email, both | both
 signUp         | Sign Up Link Clicked         | function | --                    | --
+inputChanged   | Input Changed                | function | --                    | --
 hideLoginError | Login Error Message Closed   | function | --                    | --
 showLoginError | Login Error Message Shown    | function | --                    | --
 forgotPassword | Forgot Password Link Clicked | function | --                    | --
-loginSuccess   | Login Form Valid             | function | --                    | --
+loginValid     | Login Form Valid             | function | --                    | --
 loginError     | Login Form Invalid           | function | --                    | --
 
 

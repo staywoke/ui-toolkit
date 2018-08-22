@@ -39,20 +39,20 @@ stories.add('Component Overview', () => {
   attributes = attributes.trim()
 
   return {
-    template: `<sw-login-form ${attributes}
+    template: `<sw-login-form ${attributes} :style="{ maxWidth: '360px', margin: '0 auto', textAlign: 'left' }"
+      @forgotPassword="forgotPassword"
       @signUp="signUp"
       @hideLoginError="hideLoginError"
       @showLoginError="showLoginError"
-      @forgotPassword="forgotPassword"
-      @loginSuccess="loginSuccess"
+      @loginValid="loginValid"
       @loginError="loginError"
     />`,
     methods: {
+      forgotPassword: action('Forgot Password Clicked'),
       signUp: action('Sign Up Clicked'),
       hideLoginError: action('Login Error Hidden'),
       showLoginError: action('Login Error Shown'),
-      forgotPassword: action('Forgot Password Clicked'),
-      loginSuccess: action('Login Success'),
+      loginValid: action('Login Valid'),
       loginError: action('Login Error')
     }
   }

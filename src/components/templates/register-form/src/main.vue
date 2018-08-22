@@ -6,6 +6,10 @@
       <h2>{{ formHeader }}</h2>
     </el-form-item>
 
+    <el-form-item label="Invite Code" prop="inviteCode" class="invite-code-wrapper" ref="inviteCode" v-if="inviteOnly">
+      <el-input name="inviteCode" maxlength="6" minlength="6" @input="changeInput('inviteCode')" type="text" v-numbers v-model.trim="registerForm.inviteCode" autocomplete="off" />
+    </el-form-item>
+
     <el-form-item label="Email Address" prop="email" class="email-wrapper" ref="email">
       <el-input name="email" @input="changeInput('email')" type="email" v-email-address v-model.trim="registerForm.email" autocomplete="off" />
     </el-form-item>
@@ -32,14 +36,12 @@
 
     <el-form-item class="other-options">
       <el-button type="text" class="login" @click="login">Login</el-button>
-      <span>|</span>
-      <el-button type="text" class="sign-up" @click="signUp">Sign Up</el-button>
     </el-form-item>
   </el-form>
 </template>
 
 <script>
-import { Username, EmailAddress, Mixed } from '../../../../directives'
+import { Username, EmailAddress, Numbers } from '../../../../directives'
 
 import Container from '../../../organisms/container'
 import Form from '../../../molecules/form'
@@ -61,18 +63,22 @@ export default {
   directives: {
     Username,
     EmailAddress,
-    Mixed
+    Numbers
   },
   props: {
     formHeader: {
       type: String,
       default: 'Register'
+    },
+    inviteOnly: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     const validateUsername = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error(`Please enter a Username`))
+        callback(new Error('Please enter a Username'))
       } else {
         if (value.length < 6) {
           callback(new Error('Username to Short'))
@@ -86,9 +92,18 @@ export default {
       callback()
     }
 
+    const validateInviteCode = (rule, value, callback) => {
+      if (!/^([0-9]{6})$/.test(value)) {
+        callback(new Error('Invalid Invite Code'))
+      }
+
+      callback()
+    }
+
     return {
       formError: null,
       registerForm: {
+        inviteCode: '',
         username: '',
         email: '',
         password: '',
@@ -115,6 +130,13 @@ export default {
             trigger: 'blur'
           }
         ],
+        inviteCode: [
+          {
+            required: this.inviteOnly,
+            validator: validateInviteCode,
+            trigger: 'blur'
+          }
+        ],
         firstname: [
           { required: true, message: 'Please enter your First Name', trigger: 'blur' }
         ],
@@ -127,7 +149,13 @@ export default {
   methods: {
     changeInput (inputName) {
       this.$refs[inputName].clearValidate()
-      this.$emit('inputChanged', inputName)
+
+      if (inputName !== 'password') {
+        this.$emit('inputChanged', {
+          name: inputName,
+          value: this.registerForm[inputName]
+        })
+      }
     },
     hideError () {
       this.formError = null
@@ -140,14 +168,11 @@ export default {
     login () {
       this.$emit('login')
     },
-    signUp () {
-      this.$emit('signUp')
-    },
     submitForm (formName) {
       this.hideError()
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$emit('registerValid')
+          this.$emit('registerValid', this.registerForm)
         } else {
           this.showError('Check the Form Below')
           this.$emit('registerError', 'Invalid Form')

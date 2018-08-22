@@ -9,10 +9,11 @@ Atom › Register Form
 ```xml
 <sw-register-form
   @signUp="signUp"
+  @inputChanged="inputChanged"
   @hideRegisterError="hideRegisterError"
   @showRegisterError="showRegisterError"
   @forgotPassword="forgotPassword"
-  @registerSuccess="registerSuccess"
+  @registerValid="registerValid"
   @registerError="registerError"
 />
 ```
@@ -31,6 +32,9 @@ export default {
     signUp() {
       console.log('Sign Up Clicked')
     },
+    inputChanged(input) {
+      console.log('Input Changed', input)
+    },
     hideRegisterError() {
       console.log('Register Error Hidden')
     },
@@ -40,8 +44,8 @@ export default {
     forgotPassword() {
       console.log('Forgot Password Clicked')
     },
-    registerSuccess() {
-      console.log('Register Success')
+    registerValid() {
+      console.log('Register Valid')
     },
     registerError(message) {
       console.error('Register Error', message)
@@ -58,10 +62,11 @@ Attribute         | Description                    | Type     | Accepted Values 
 formHeader        | Form Header                    | string   | --                    | StayWoke Register
 registerMode      | Register Mode ( username type) | string   | username, email, both | both
 signUp            | Sign Up Link Clicked           | function | --                    | --
+inputChanged      | Input Changed                  | function | --                    | --
 hideRegisterError | Register Error Message Closed  | function | --                    | --
 showRegisterError | Register Error Message Shown   | function | --                    | --
 forgotPassword    | Forgot Password Link Clicked   | function | --                    | --
-registerSuccess   | Register Form Valid            | function | --                    | --
+registerValid     | Register Form Valid            | function | --                    | --
 registerError     | Register Form Invalid          | function | --                    | --
 
 

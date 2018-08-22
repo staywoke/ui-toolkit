@@ -8,11 +8,12 @@ Atom › Forgot Password Form
 
 ```xml
 <sw-forgot-password-form
+  @login="login"
   @signUp="signUp"
+  @inputChanged="inputChanged"
   @hideForgotPasswordError="hideForgotPasswordError"
   @showForgotPasswordError="showForgotPasswordError"
-  @forgotPassword="forgotPassword"
-  @forgotPasswordSuccess="forgotPasswordSuccess"
+  @forgotPasswordValid="forgotPasswordValid"
   @forgotPasswordError="forgotPasswordError"
 />
 ```
@@ -28,8 +29,14 @@ export default {
     ForgotPasswordForm
   },
   methods: {
+    login() {
+      console.log('Login Clicked')
+    },
     signUp() {
       console.log('Sign Up Clicked')
+    },
+    inputChanged(input) {
+      console.log('Input Changed', input)
     },
     hideForgotPasswordError() {
       console.log('Forgot Password Error Hidden')
@@ -37,11 +44,8 @@ export default {
     showForgotPasswordError(message) {
       console.error('Forgot Password Error Shown', message)
     },
-    forgotPassword() {
-      console.log('Forgot Password Clicked')
-    },
-    forgotPasswordSuccess() {
-      console.log('Forgot Password Success')
+    forgotPasswordValid() {
+      console.log('Forgot Password Valid')
     },
     forgotPasswordError(message) {
       console.error('Forgot Password Error', message)
@@ -53,16 +57,16 @@ export default {
 
 #### Attributes:
 
-Attribute      | Description                  | Type     | Accepted Values       | Default
----------------|------------------------------|----------|-----------------------|------------
-formHeader     | Form Header                  | string   | --                    | StayWoke ForgotPassword
-forgotPasswordMode      | Forgot Password Mode ( username type)  | string   | username, email, both | both
-signUp         | Sign Up Link Clicked         | function | --                    | --
-hideForgotPasswordError | Forgot Password Error Message Closed   | function | --                    | --
-showForgotPasswordError | Forgot Password Error Message Shown    | function | --                    | --
-forgotPassword | Forgot Password Link Clicked | function | --                    | --
-forgotPasswordSuccess   | Forgot Password Form Valid             | function | --                    | --
-forgotPasswordError     | Forgot Password Form Invalid           | function | --                    | --
+Attribute               | Description                          | Type     | Accepted Values       | Default
+------------------------|--------------------------------------|----------|-----------------------|------------
+formHeader              | Form Header                          | string   | --                    | StayWoke ForgotPassword
+login                   | Login Link Clicked                   | function | --                    | --
+signUp                  | Sign Up Link Clicked                 | function | --                    | --
+inputChanged            | Input Changed                        | function | --                    | --
+hideForgotPasswordError | Forgot Password Error Message Closed | function | --                    | --
+showForgotPasswordError | Forgot Password Error Message Shown  | function | --                    | --
+forgotPasswordSuccess   | Forgot Password Form Valid           | function | --                    | --
+forgotPasswordError     | Forgot Password Form Invalid         | function | --                    | --
 
 
 #### Documentation:

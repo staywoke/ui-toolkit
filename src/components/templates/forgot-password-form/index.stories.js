@@ -18,42 +18,28 @@ stories.addDecorator(withKnobs)
 stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
 stories.add('Component Overview', () => {
-  const forgotPasswordMode = select(
-    'ForgotPassword Mode',
-    {
-      '': '---',
-      'username': 'username',
-      'email': 'email',
-      'both': 'both'
-    },
-    ''
-  )
-
   const formHeader = text('Form Header', 'Forgot Password')
 
-  let attributes = ''
-
-  attributes = attributes.concat((forgotPasswordMode !== '' && forgotPasswordMode !== 'both') ? `forgotPassword-mode="${forgotPasswordMode}" ` : '')
-    .concat((formHeader !== 'ForgotPassword') ? `form-header="${formHeader}" ` : '')
-
-  attributes = attributes.trim()
+  let attributes = (formHeader !== 'Forgot Password') ? `form-header="${formHeader}" ` : ''
 
   return {
-    template: `<sw-forgot-password-form ${attributes}
+    template: `<sw-forgot-password-form ${attributes} :style="{ maxWidth: '360px', margin: '0 auto', textAlign: 'left' }"
+      @login="login"
       @signUp="signUp"
+      @inputChanged="inputChanged"
       @hideForgotPasswordError="hideForgotPasswordError"
       @showForgotPasswordError="showForgotPasswordError"
-      @forgotPassword="forgotPassword"
-      @forgotPasswordSuccess="forgotPasswordSuccess"
+      @forgotPasswordValid="forgotPasswordValid"
       @forgotPasswordError="forgotPasswordError"
     />`,
     methods: {
+      login: action('Login Clicked'),
       signUp: action('Sign Up Clicked'),
-      hideForgotPasswordError: action('ForgotPassword Error Hidden'),
-      showForgotPasswordError: action('ForgotPassword Error Shown'),
-      forgotPassword: action('Forgot Password Clicked'),
-      forgotPasswordSuccess: action('ForgotPassword Success'),
-      forgotPasswordError: action('ForgotPassword Error')
+      inputChanged: action('Input Clicked'),
+      hideForgotPasswordError: action('Forgot Password Error Hidden'),
+      showForgotPasswordError: action('Forgot Password Error Shown'),
+      forgotPasswordValid: action('Forgot Password Valid'),
+      forgotPasswordError: action('Forgot Password Error')
     }
   }
 })

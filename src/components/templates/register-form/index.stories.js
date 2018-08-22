@@ -4,7 +4,7 @@ import Centered from '@storybook/addon-centered'
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
-import { withKnobs, text, select } from '@storybook/addon-knobs/vue'
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/vue'
 
 /* eslint-disable-next-line no-unused-vars */
 import Component from '.'
@@ -29,31 +29,35 @@ stories.add('Component Overview', () => {
     ''
   )
 
+  const inviteOnly = boolean('Invite Only', true)
   const formHeader = text('Form Header', 'Register')
 
   let attributes = ''
 
   attributes = attributes.concat((registerMode !== '' && registerMode !== 'both') ? `register-mode="${registerMode}" ` : '')
     .concat((formHeader !== 'Register') ? `form-header="${formHeader}" ` : '')
+    .concat((inviteOnly) ? 'invite-only ' : '')
 
   attributes = attributes.trim()
 
   return {
-    template: `<sw-register-form ${attributes}
+    template: `<sw-register-form ${attributes} :style="{ maxWidth: '360px', margin: '0 auto', textAlign: 'left' }"
       @signUp="signUp"
+      @inputChanged="inputChanged"
       @hideRegisterError="hideRegisterError"
       @showRegisterError="showRegisterError"
       @forgotPassword="forgotPassword"
-      @registerSuccess="registerSuccess"
-      @registerError="registerError"
+      @registerValid="registerSuccess"
+      @registerError="registerValid"
     />`,
     methods: {
       signUp: action('Sign Up Clicked'),
+      inputChanged: action('Input Changed'),
       hideRegisterError: action('Register Error Hidden'),
       showRegisterError: action('Register Error Shown'),
       forgotPassword: action('Forgot Password Clicked'),
       registerSuccess: action('Register Success'),
-      registerError: action('Register Error')
+      registerValid: action('Register Valid')
     }
   }
 })
