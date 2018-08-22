@@ -1,6 +1,6 @@
 <template>
   <el-form :model="registerForm" :rules="rules" ref="registerForm" label="top" size="small" class="register-form" status-icon autocomplete="off">
-    <el-alert :title="formError" type="error" show-icon v-if="formError" @close="hideError" class="register-error" />
+    <el-alert :title="getErrorMessage" type="error" show-icon v-if="getErrorMessage" @close="hideError" class="register-error" />
 
     <el-form-item>
       <h2>{{ formHeader }}</h2>
@@ -105,7 +105,7 @@ export default {
     }
 
     return {
-      formError: this.errorMessage  || '',
+      formError: '',
       registerForm: {
         inviteCode: '',
         username: '',
@@ -150,9 +150,15 @@ export default {
       }
     }
   },
-  watch: {
-    errorMessage: (error) => {
-      this.formError = error
+  computed: {
+    getErrorMessage () {
+      if (this.formError) {
+        return this.formError
+      } else if (this.errorMessage) {
+        return this.errorMessage
+      } else {
+        return null
+      }
     }
   },
   methods: {

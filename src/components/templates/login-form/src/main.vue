@@ -1,6 +1,6 @@
 <template>
   <el-form :model="loginForm" :rules="rules" ref="loginForm" label="top" size="small" class="login-form" status-icon>
-    <el-alert :title="formError" type="error" show-icon v-if="formError" @close="hideError" class="login-error" />
+    <el-alert :title="getErrorMessage" type="error" show-icon v-if="getErrorMessage" @close="hideError" class="login-error" />
 
     <el-form-item>
       <h2>{{ formHeader }}</h2>
@@ -74,6 +74,15 @@ export default {
   computed: {
     usernameLabel () {
       return this.getUsernameLabel()
+    },
+    getErrorMessage () {
+      if (this.formError) {
+        return this.formError
+      } else if (this.errorMessage) {
+        return this.errorMessage
+      } else {
+        return null
+      }
     }
   },
   data () {
@@ -100,7 +109,7 @@ export default {
     }
 
     return {
-      formError: this.errorMessage  || '',
+      formError: '',
       loginForm: {
         password: '',
         username: ''
@@ -120,11 +129,6 @@ export default {
           }
         ]
       }
-    }
-  },
-  watch: {
-    errorMessage: (error) => {
-      this.formError = error
     }
   },
   methods: {
