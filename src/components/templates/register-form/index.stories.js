@@ -4,7 +4,7 @@ import Centered from '@storybook/addon-centered'
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withMarkdownNotes } from '@storybook/addon-notes'
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/vue'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/vue'
 
 /* eslint-disable-next-line no-unused-vars */
 import Component from '.'
@@ -18,26 +18,19 @@ stories.addDecorator(withKnobs)
 stories.addDecorator((story, context) => withMarkdownNotes(README)(story)(context))
 
 stories.add('Component Overview', () => {
-  const registerMode = select(
-    'Register Mode',
-    {
-      '': '---',
-      'username': 'username',
-      'email': 'email',
-      'both': 'both'
-    },
-    ''
-  )
-
   const inviteOnly = boolean('Invite Only', true)
+  const requestEmail = boolean('Request Email', false)
+  const requestPhone = boolean('Request Phone', true)
+
   const formHeader = text('Form Header', 'Register')
   const errorMessage = text('Error Message', '')
 
   let attributes = ''
 
-  attributes = attributes.concat((registerMode !== '' && registerMode !== 'both') ? `register-mode="${registerMode}" ` : '')
-    .concat((formHeader !== 'Register') ? `form-header="${formHeader}" ` : '')
+  attributes = attributes.concat((formHeader !== 'Register') ? `form-header="${formHeader}" ` : '')
     .concat((inviteOnly) ? 'invite-only ' : '')
+    .concat((requestEmail) ? 'request-email ' : '')
+    .concat((requestPhone) ? 'request-phone ' : '')
     .concat((errorMessage !== '') ? `error-message="${errorMessage}" ` : '')
 
   attributes = attributes.trim()

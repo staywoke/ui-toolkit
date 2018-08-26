@@ -57,18 +57,20 @@ export default {
 
 #### Attributes:
 
-Attribute         | Description                    | Type     | Accepted Values       | Default
-------------------|--------------------------------|----------|-----------------------|------------
-formHeader        | Form Header                    | string   | --                    | StayWoke Register
-errorMessage      | Error Message                  | string   | --                    | --
-registerMode      | Register Mode ( username type) | string   | username, email, both | both
-signUp            | Sign Up Link Clicked           | function | --                    | --
-inputChanged      | Input Changed                  | function | --                    | --
-hideRegisterError | Register Error Message Closed  | function | --                    | --
-showRegisterError | Register Error Message Shown   | function | --                    | --
-forgotPassword    | Forgot Password Link Clicked   | function | --                    | --
-registerValid     | Register Form Valid            | function | --                    | --
-registerError     | Register Form Invalid          | function | --                    | --
+Attribute         | Description                    | Type     | Accepted Values | Default
+------------------|--------------------------------|----------|-----------------|------------
+formHeader        | Form Header                    | string   | --              | StayWoke Register
+inviteOnly        | Require Invite Code            | boolean  | --              | true
+requestEmail      | Request Email Address          | boolean  | --              | false
+requestPhone      | Request Phone Number           | boolean  | --              | true
+errorMessage      | Error Message                  | string   | --              | --
+signUp            | Sign Up Link Clicked           | function | --              | --
+inputChanged      | Input Changed                  | function | --              | --
+hideRegisterError | Register Error Message Closed  | function | --              | --
+showRegisterError | Register Error Message Shown   | function | --              | --
+forgotPassword    | Forgot Password Link Clicked   | function | --              | --
+registerValid     | Register Form Valid            | function | --              | --
+registerError     | Register Form Invalid          | function | --              | --
 
 
 #### Documentation:

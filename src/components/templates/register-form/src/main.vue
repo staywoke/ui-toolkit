@@ -10,8 +10,12 @@
       <el-input name="inviteCode" maxlength="6" minlength="6" @input="changeInput('inviteCode')" type="text" v-numbers v-model.trim="registerForm.inviteCode" />
     </el-form-item>
 
-    <el-form-item label="Email Address" prop="email" class="email-wrapper" ref="email">
+    <el-form-item label="Email Address" prop="email" class="email-wrapper" ref="email" v-if="requestEmail">
       <el-input name="email" @input="changeInput('email')" type="email" v-email-address v-model.trim="registerForm.email" />
+    </el-form-item>
+
+    <el-form-item label="Phone Number" prop="phone" class="phone-wrapper" ref="phone" v-if="requestPhone">
+      <el-input name="phone" maxlength="10" minlength="10" @input="changeInput('phone')" type="tel" v-numbers v-model.trim="registerForm.phone" />
     </el-form-item>
 
     <el-form-item label="Username" prop="username" class="username-wrapper" ref="username">
@@ -74,6 +78,14 @@ export default {
       type: String,
       default: 'Register'
     },
+    requestEmail: {
+      type: Boolean,
+      default: false
+    },
+    requestPhone: {
+      type: Boolean,
+      default: true
+    },
     inviteOnly: {
       type: Boolean,
       default: false
@@ -104,12 +116,21 @@ export default {
       callback()
     }
 
+    const validatePhoneNumber = (rule, value, callback) => {
+      if (!/^([0-9]{10})$/.test(value)) {
+        callback(new Error('Invalid Phone Number'))
+      }
+
+      callback()
+    }
+
     return {
       formError: '',
       registerForm: {
         inviteCode: '',
         username: '',
         email: '',
+        phone: '',
         password: '',
         firstname: '',
         lastname: ''
@@ -122,8 +143,15 @@ export default {
         email: [
           {
             type: 'email',
-            required: true,
+            required: this.requestEmail,
             message: 'Invalid Email Address',
+            trigger: 'blur'
+          }
+        ],
+        phone: [
+          {
+            required: this.requestPhone,
+            validator: validatePhoneNumber,
             trigger: 'blur'
           }
         ],
