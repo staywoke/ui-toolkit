@@ -138,7 +138,7 @@ export default {
       rules: {
         password: [
           { required: true, message: 'Please enter a Password', trigger: 'blur' },
-          { min: 6, message: 'Password to Short', trigger: 'blur' }
+          { min: 8, message: 'Password to Short', trigger: 'blur' }
         ],
         email: [
           {
