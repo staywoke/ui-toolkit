@@ -162,7 +162,7 @@ export const Mixed = {
     }
 
     el.onkeydown = function (evt) {
-      if (!validUsernameCharacter(evt) && !validEmailCharacter(evt)) {
+      if (!validUsernameCharacter(evt) && !isNumber(evt)) {
         evt.preventDefault()
         return false
       }

@@ -8,7 +8,7 @@
 
     <el-form-item :label="usernameLabel" prop="username" class="username-wrapper" ref="username">
       <el-input v-if="loginMode === 'username'" @input="changeInput('username')" type="text" name="username" v-username v-model.trim="loginForm.username" />
-      <el-input v-if="loginMode === 'email'" @input="changeInput('username')" type="email" name="username" v-email-address v-model.trim="loginForm.username" />
+      <el-input v-if="loginMode === 'phone'" @input="changeInput('username')" type="tel" name="username" v-numbers v-model.trim="loginForm.username" />
       <el-input v-if="loginMode === 'both'" @input="changeInput('username')" type="text" name="username" v-mixed v-model.trim="loginForm.username" />
     </el-form-item>
 
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { Username, EmailAddress, Mixed } from '../../../../directives'
+import { Username, Mixed, Numbers } from '../../../../directives'
 
 import Container from '../../../organisms/container'
 import Form from '../../../molecules/form'
@@ -50,8 +50,8 @@ export default {
   },
   directives: {
     Username,
-    EmailAddress,
-    Mixed
+    Mixed,
+    Numbers
   },
   props: {
     errorMessage: {
@@ -66,7 +66,7 @@ export default {
       type: String,
       default: 'both',
       validator: value => {
-        const validTypes = ['username', 'email', 'both']
+        const validTypes = ['username', 'phone', 'both']
         return validTypes.indexOf(value) !== -1
       }
     }
@@ -91,10 +91,6 @@ export default {
         callback(new Error(`Please enter a ${this.getUsernameLabel()}`))
       }
 
-      if (value !== '' && value.indexOf('@') !== -1 && !this.validEmail(value)) {
-        callback(new Error('Invalid Email Address'))
-      }
-
       if (value !== '' && value.indexOf('@') === -1) {
         if (value.length < 6) {
           callback(new Error('Username to Short'))
@@ -108,6 +104,22 @@ export default {
       callback()
     }
 
+    const validatePhoneNumber = (rule, value, callback) => {
+      if (!/^([0-9]{10})$/.test(value)) {
+        callback(new Error('Invalid Phone Number'))
+      }
+
+      callback()
+    }
+
+    const validate = (rule, value, callback) => {
+      if (/^([^a-zA-Z ]+)$/.test(value)) {
+        return validatePhoneNumber(rule, value, callback)
+      } else {
+        return validateUsername(rule, value, callback)
+      }
+    }
+
     return {
       formError: '',
       loginForm: {
@@ -117,14 +129,13 @@ export default {
       rules: {
         password: [
           { required: true, message: 'Please enter your password', trigger: 'blur' },
-          { min: 6, message: 'Password to Short', trigger: 'blur' }
+          { min: 8, message: 'Password to Short', trigger: 'blur' }
         ],
         username: [
           {
-            type: (this.loginMode === 'email') ? 'email' : null,
             required: true,
-            validator: (this.loginMode === 'email') ? null : validateUsername,
-            message: (this.loginMode === 'email') ? 'Invalid Email Address' : null,
+            validator: validate,
+            message: 'Invalid Username',
             trigger: 'blur'
           }
         ]
@@ -144,10 +155,10 @@ export default {
     },
     getUsernameLabel () {
       return (this.loginMode === 'both')
-        ? 'Username or Email Address'
+        ? 'Username or Phone Number'
         : (this.loginMode === 'username')
           ? 'Username'
-          : 'Email Address'
+          : 'Phone Number'
     },
     hideError () {
       this.formError = null
@@ -178,11 +189,6 @@ export default {
     validUsername (username) {
       var re = /^([a-zA-Z][a-zA-Z0-9_]{4,28}[a-zA-Z0-9]$)$/
       return re.test(username)
-    },
-    validEmail (email) {
-      // eslint-disable-next-line no-useless-escape
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return re.test(email)
     }
   }
 }
